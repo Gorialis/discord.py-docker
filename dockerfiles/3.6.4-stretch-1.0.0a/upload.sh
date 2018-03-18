@@ -1,0 +1,35 @@
+#!/bin/bash
+set -euo pipefail
+
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0
+docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite

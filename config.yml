@@ -1,0 +1,62 @@
+
+# this file works as a combination of Dockerfile arguments and Docker tags
+# x: ["y", "z"] means the variable is x, and it is reflected in Docker tags y and z.
+# tags should decrease in specificity along the list
+# a blank tag means it is implicit when omitted
+# this is used to automatically generate the Dockerfiles, metadata and readme.
+
+python_versions:
+  3.6.4: ["3.6.4", "3.6", "3", ""]
+  #3.5.5: ["3.5.5", "3.5"] # dropped because no stretch image and libc has some issues
+  #3.4.8: ["3.4.8", "3.4"] # dropped because not compatible with a lot of async drivers
+
+distros:
+  stretch: ["stretch", ""]
+  slim-stretch: ["slim-stretch", "slim"]
+  alpine: ["alpine"]
+
+checkouts:
+  # blank key means pypi (no git)
+  '': ["pypi", ""]
+  rewrite: ["1.0.0a", "1.0.0", "1.0", "rewrite"]
+  async: ["0.16.12", "0.16", "async"]
+
+extra_deps:
+  # extra_deps is a list of lists
+  # every top-level list is run as a different pip command
+  # every sub-level list is installed together in one pip command
+  # this is so that packages that require others to build install correctly
+  - - Cython
+  - - aiofiles
+    - aiomysql
+    - aioredis
+    - asyncpg
+    - beautifulsoup4
+    - click
+    - colorlog
+    - fuzzywuzzy[speedup]
+    - humanize
+    - lru-dict
+    - lxml
+    - matplotlib
+    - numpy
+    - objgraph
+    - parsedatetime
+    - Pillow
+    - psutil
+    - pycrypto
+    - pycryptodome
+    - pytest
+    - pytest-cov
+    - python-dateutil
+    - PyYAML
+    - ruamel.yaml
+    - sqlalchemy
+    - tabulate
+    - tox
+    - twine
+    - uvloop
+    - wand
+    - watchdog
+    - youtube-dl
+  - - scipy
