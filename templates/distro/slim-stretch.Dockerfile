@@ -4,7 +4,7 @@ FROM python:{{ python_version }}-slim-stretch
 
 RUN apt update && \
     # basic deps
-    apt install -y git openssl ssh gettext sudo build-essential \
+    apt install -y -qq git openssl ssh gettext sudo build-essential \
     # voice support
     libffi-dev libsodium-dev libopus-dev \
     # uvloop
@@ -16,7 +16,9 @@ RUN apt update && \
     # scipy
     libopenblas-dev \
     # wand
-    imagemagick
+    imagemagick \
+    # apt is so noisy
+    > /dev/null
 
 {% block python_setup %}{% endblock %}
 

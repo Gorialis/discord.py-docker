@@ -6,7 +6,7 @@
 {% block python_setup -%}
 
 # update pip if it's out of date
-RUN pip install -U pip --retries 30
+RUN pip install -U pip -q --retries 30
 
 # extras
 {% include 'python/extras.Dockerfile' %}

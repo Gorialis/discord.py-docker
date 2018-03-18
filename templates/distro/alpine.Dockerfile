@@ -9,7 +9,7 @@ RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 RUN apk update && \
     # basic deps
-    apk add git mercurial openssl openssh alpine-sdk bash gettext sudo build-base linux-headers \
+    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base linux-headers \
     # voice support
     libffi-dev libsodium-dev opus opus-dev \
     # uvloop
