@@ -10,7 +10,7 @@ before_script:
   - echo -e $SECRET_DOCKER_LOGIN_PASSWORD | docker login --username $SECRET_DOCKER_LOGIN_USERNAME --password-stdin
 
 after_script:
-  - docker system prune -af
+  - docker system prune -f
 
 build:
   stage: build

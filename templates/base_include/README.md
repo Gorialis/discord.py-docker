@@ -11,7 +11,7 @@
 ## Tags and respective `Dockerfile` links
 
 {% for tags in builds %}
--   [{{ tags|inline_codeblock }} (*{{ tags[0] }}/Dockerfile*)](https://github.com/Gorialis/discord.py-docker/dockerfiles/{{ tags[0] }}/Dockerfile)
+-   [{{ tags|inline_codeblock }} (*{{ tags[0] }}/Dockerfile*)](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/{{ tags[0] }}/Dockerfile)
 {% endfor %}
 
 ## Extra dependencies
