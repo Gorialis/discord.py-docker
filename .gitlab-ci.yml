@@ -6,7 +6,7 @@ variables:
 
 before_script:
   - docker info
-  - apk add --no-cache python3 bash
+  - apk add --no-cache python3 bash git
   - echo -e $SECRET_DOCKER_LOGIN_PASSWORD | docker login --username $SECRET_DOCKER_LOGIN_USERNAME --password-stdin
 
 after_script:

@@ -4,6 +4,9 @@ set -euo pipefail
 DOCKER_DISCORD_PY_FAILED=""
 DOCKER_DISCORD_PY_OK=""
 
+GIT_HEAD=${GIT_HEAD:-unknown+unknown}
+echo "building with git head ${GIT_HEAD}"
+
 for dockerdirectory in *; do
     if [ -d $dockerdirectory ]; then
         cd $dockerdirectory;

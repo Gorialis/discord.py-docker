@@ -16,6 +16,8 @@ RUN apk update && \
     libuv-dev \
     # lxml
     libxml2-dev libxslt-dev \
+    # cairosvg
+    cairo-dev \
     # Pillow
     jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev \
     # scipy
@@ -25,11 +27,24 @@ RUN apk update && \
 
 {% block python_setup %}{% endblock %}
 
-WORKDIR /tmp/test
+# remove wheel cache
+RUN rm -rf /root/.cache/pip/wheels
 
-COPY ./test_script.py /tmp/test/test_script.py
+WORKDIR /tmp/test_image
 
+COPY ./test_script.py /tmp/test_image/test_script.py
+
+# run test set pre-removal
 RUN python -m pytest -vs test_script.py
+
+# remove (hopefully) unneeded development headers
+RUN apk del -q libffi-dev libsodium-dev libxml2-dev cairo-dev harfbuzz-dev fribidi-dev
+
+# run test set post-removal
+RUN python -m pytest -vs test_script.py
+
+# remove test data
+RUN rm -rf /tmp/test_image
 
 WORKDIR /app
 

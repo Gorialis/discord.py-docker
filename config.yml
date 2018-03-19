@@ -32,8 +32,10 @@ extra_deps:
     - aioredis
     - asyncpg
     - beautifulsoup4
+    - cairosvg
     - click
     - colorlog
+    - colorthief
     - fuzzywuzzy[speedup]
     - humanize
     - lru-dict

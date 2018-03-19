@@ -11,6 +11,8 @@ RUN apt update && \
     libuv1-dev \
     # lxml
     libxml2-dev libxslt1-dev \
+    # cairosvg
+    libcairo2-dev \
     # Pillow
     libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev liblcms2-dev libtiff5-dev tk8.6-dev tcl8.6-dev libwebp-dev libharfbuzz-dev libfribidi-dev \
     # scipy
@@ -22,11 +24,26 @@ RUN apt update && \
 
 {% block python_setup %}{% endblock %}
 
-WORKDIR /tmp/test
+# remove wheel cache
+RUN rm -rf /root/.cache/pip/wheels
 
-COPY ./test_script.py /tmp/test/test_script.py
+WORKDIR /tmp/test_image
 
+COPY ./test_script.py /tmp/test_image/test_script.py
+
+# run test set pre-removal
 RUN python -m pytest -vs test_script.py
+
+# remove (hopefully) unneeded development headers
+RUN apt purge -y -qq libffi-dev libsodium-dev libuv1-dev libxml2-dev libxslt1-dev libcairo2-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev liblcms2-dev libtiff5-dev tk8.6-dev tcl8.6-dev libwebp-dev libharfbuzz-dev libfribidi-dev libopenblas-dev \
+    # apt is noisy
+    > /dev/null
+
+# run test set post-removal
+RUN python -m pytest -vs test_script.py
+
+# remove test data
+RUN rm -rf /tmp/test_image
 
 WORKDIR /app
 

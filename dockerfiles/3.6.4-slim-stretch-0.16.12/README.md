@@ -10,7 +10,7 @@
 
 # 3.6.4-slim-stretch-0.16.12
 
-This Dockerfile was generated at 2018-03-18 14:24:59 UTC.
+This Dockerfile was generated at 2018-03-20 16:38:27 UTC.
 
 ## Tags
 
@@ -18,7 +18,7 @@ This Dockerfile was generated at 2018-03-18 14:24:59 UTC.
 
 ## Installed extra dependencies
 
-`Cython`, `aiofiles`, `aiomysql`, `aioredis`, `asyncpg`, `beautifulsoup4`, `click`, `colorlog`, `fuzzywuzzy[speedup]`, `humanize`, `lru-dict`, `lxml`, `matplotlib`, `numpy`, `objgraph`, `parsedatetime`, `Pillow`, `psutil`, `pycrypto`, `pycryptodome`, `pytest`, `pytest-cov`, `python-dateutil`, `PyYAML`, `ruamel.yaml`, `sqlalchemy`, `tabulate`, `tox`, `twine`, `uvloop`, `wand`, `watchdog`, `youtube-dl`, `scipy`
+`Cython`, `aiofiles`, `aiomysql`, `aioredis`, `asyncpg`, `beautifulsoup4`, `cairosvg`, `click`, `colorlog`, `colorthief`, `fuzzywuzzy[speedup]`, `humanize`, `lru-dict`, `lxml`, `matplotlib`, `numpy`, `objgraph`, `parsedatetime`, `Pillow`, `psutil`, `pycrypto`, `pycryptodome`, `pytest`, `pytest-cov`, `python-dateutil`, `PyYAML`, `ruamel.yaml`, `sqlalchemy`, `tabulate`, `tox`, `twine`, `uvloop`, `wand`, `watchdog`, `youtube-dl`, `scipy`
 
 ## Building & uploading this image
 
