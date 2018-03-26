@@ -61,4 +61,3 @@ extra_deps:
     - wand
     - watchdog
     - youtube-dl
-  - - scipy

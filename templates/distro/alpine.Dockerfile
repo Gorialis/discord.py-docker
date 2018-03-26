@@ -11,7 +11,7 @@ RUN apk update && \
     # basic deps
     apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base linux-headers \
     # voice support
-    libffi-dev libsodium-dev opus opus-dev \
+    libffi-dev libsodium-dev opus-dev \
     # uvloop
     libuv-dev \
     # lxml
@@ -20,31 +20,28 @@ RUN apk update && \
     cairo-dev \
     # Pillow
     jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev \
-    # scipy
-    openblas-dev \
     # wand
     imagemagick-dev
 
 {% block python_setup %}{% endblock %}
 
-# remove wheel cache
-RUN rm -rf /root/.cache/pip/wheels
-
 WORKDIR /tmp/test_image
 
 COPY ./test_script.py /tmp/test_image/test_script.py
 
-# run test set pre-removal
+# run test set
 RUN python -m pytest -vs test_script.py
 
-# remove (hopefully) unneeded development headers
-RUN apk del -q libffi-dev libsodium-dev libxml2-dev cairo-dev harfbuzz-dev fribidi-dev
-
-# run test set post-removal
-RUN python -m pytest -vs test_script.py
-
-# remove test data
-RUN rm -rf /tmp/test_image
+# remove test data and caches
+RUN rm -rf /tmp/test_image && \
+    rm -rf /root/.cache/pip/* && \
+    rm -rf /var/cache/apk/* && \
+    find /usr/local -depth \
+        \( \
+            \( -type d -a \( -name test -o -name tests \) \) \
+            -o \
+            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
+        \) -exec rm -rf '{}' +
 
 WORKDIR /app
 
