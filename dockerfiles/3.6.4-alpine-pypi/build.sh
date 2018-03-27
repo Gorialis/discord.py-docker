@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-docker build --no-cache --build-arg GIT_HEAD=${GIT_HEAD:-unknown+unknown} --build-arg BUILD_TIME="$(date -u "+%Y-%m-%d %H:%M:%S UTC")" --tag discord.py:3.6.4-alpine-pypi --tag gorialis/discord.py:3.6.4-alpine-pypi --tag discord.py:3.6.4-alpine --tag gorialis/discord.py:3.6.4-alpine --tag discord.py:3.6-alpine-pypi --tag gorialis/discord.py:3.6-alpine-pypi --tag discord.py:3.6-alpine --tag gorialis/discord.py:3.6-alpine --tag discord.py:3-alpine-pypi --tag gorialis/discord.py:3-alpine-pypi --tag discord.py:3-alpine --tag gorialis/discord.py:3-alpine --tag discord.py:alpine-pypi --tag gorialis/discord.py:alpine-pypi --tag discord.py:alpine --tag gorialis/discord.py:alpine .

@@ -16,48 +16,43 @@ distros:
   alpine: ["alpine"]
 
 checkouts:
-  # blank key means pypi (no git)
-  '': ["pypi", ""]
   rewrite: ["1.0.0a", "1.0.0", "1.0", "rewrite"]
-  async: ["0.16.12", "0.16", "async"]
+  async: ["0.16.12", "0.16", "async", ""]
 
-extra_deps:
-  # extra_deps is a list of lists
-  # every top-level list is run as a different pip command
-  # every sub-level list is installed together in one pip command
-  # this is so that packages that require others to build install correctly
-  - - Cython
-  - - aiofiles
-    - aiomysql
-    - aioredis
-    - asyncpg
-    - beautifulsoup4
-    - cairosvg
-    - click
-    - colorlog
-    - colorthief
-    - fuzzywuzzy[speedup]
-    - humanize
-    - lru-dict
-    - lxml
-    - matplotlib
-    - numpy
-    - objgraph
-    - parsedatetime
-    - Pillow
-    - psutil
-    - pycrypto
-    - pycryptodome
-    - pytest
-    - pytest-cov
-    - python-dateutil
-    - PyYAML
-    - ruamel.yaml
-    - sqlalchemy
-    - tabulate
-    - tox
-    - twine
-    - uvloop
-    - wand
-    - watchdog
-    - youtube-dl
+minor_deps:
+  - asyncpg
+  - lxml
+  - matplotlib
+  - numpy
+  - Pillow
+  - psutil
+  - pycrypto
+  - pycryptodome
+  - ruamel.yaml
+  - uvloop
+
+major_deps:
+  - aiofiles
+  - aiomysql
+  - aioredis
+  - beautifulsoup4
+  - cairosvg
+  - click
+  - colorlog
+  - colorthief
+  - fuzzywuzzy[speedup]
+  - humanize
+  - lru-dict
+  - objgraph
+  - parsedatetime
+  - pytest-cov
+  - python-dateutil
+  - PyYAML
+  - sqlalchemy
+  - tabulate
+  - tox
+  - twine
+  - uvloop
+  - wand
+  - watchdog
+  - youtube-dl

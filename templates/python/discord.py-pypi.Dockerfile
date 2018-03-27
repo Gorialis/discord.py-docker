@@ -1,1 +1,0 @@
-RUN pip install -U discord.py[voice,docs] --retries 30
