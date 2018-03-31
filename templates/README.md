@@ -43,7 +43,7 @@ This image is therefore the largest image and is only recommended if you use a l
 ### Create a Dockerfile for your project
 
 ```dockerfile
-FROM Gorialis/discord.py:rewrite
+FROM gorialis/discord.py:rewrite
 
 WORKDIR /app
 
@@ -58,7 +58,7 @@ CMD ["python", "bot.py"]
 You can use other tags if you need specific versions:
 
 ```dockerfile
-FROM Gorialis/discord.py:3.6-alpine-0.16.12
+FROM gorialis/discord.py:3.6-alpine-0.16.12
 
 WORKDIR /app
 
@@ -80,12 +80,12 @@ $ docker run -it --rm --name my-running-bot my-bot
 
 If you are running one-time scripts, creating your own `Dockerfile` might be tedious. You can use this image directly from CLI like so:
 ```console
-$ docker run -it --rm --name my-bot -v $PWD:/app -w /app Gorialis/discord.py:rewrite python your-bot.py
+$ docker run -it --rm --name my-bot -v $PWD:/app -w /app gorialis/discord.py:rewrite python your-bot.py
 ```
 
 You can also do this for tests:
 ```console
-$ docker run -it --rm --name my-tests -v $PWD:/app -w /app Gorialis/discord.py:rewrite pytest -vs
+$ docker run -it --rm --name my-tests -v $PWD:/app -w /app gorialis/discord.py:rewrite pytest -vs
 ```
 
 ## Building this image

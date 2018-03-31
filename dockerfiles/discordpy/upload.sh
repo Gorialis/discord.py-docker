@@ -1,643 +1,643 @@
 #!/bin/bash
 set -euo pipefail
 
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:latest
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-slim-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-minimal
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-full
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.4-alpine-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-extras
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-extras
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:latest; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD latest"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD latest"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-slim-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-slim-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-slim-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-slim-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-slim-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-slim-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-slim-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-slim-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-slim-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-stretch-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-stretch-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-stretch-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:slim-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD slim-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD slim-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0a-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0a-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-rewrite-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-rewrite-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0a-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0a-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0a"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0a"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-rewrite-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-rewrite-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-rewrite"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-rewrite"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0a-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0a-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0a-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-1.0-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-1.0-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-1.0-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-rewrite-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-rewrite-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-rewrite-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16.12-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16.12-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-async-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-async-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-minimal; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-minimal"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-minimal"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16.12-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16.12-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16.12"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16.12"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-async-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-async-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-async"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-async"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-full; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-full"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-full"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6.5-alpine-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6.5-alpine-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6.5-alpine-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3.6-alpine-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3.6-alpine-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3.6-alpine-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:3-alpine-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD 3-alpine-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD 3-alpine-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16.12-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16.12-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16.12-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-0.16-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-0.16-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-0.16-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-async-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-async-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-async-extras"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:alpine-extras; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD alpine-extras"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD alpine-extras"; fi

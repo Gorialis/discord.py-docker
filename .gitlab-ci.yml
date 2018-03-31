@@ -21,4 +21,4 @@ build:
     - python3 generate.py
     - cd dockerfiles
     - find ./ -name "*.sh" -exec chmod +x {} \;
-    - bash -c "GIT_HEAD=(`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`) ./deploy_all.sh"
+    - bash -c "GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`" ./deploy_all.sh"

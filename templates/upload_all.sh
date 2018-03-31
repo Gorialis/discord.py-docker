@@ -1,22 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
-DOCKER_DISCORD_PY_FAILED=""
-DOCKER_DISCORD_PY_OK=""
+export DOCKER_DISCORD_PY_FAILED=""
+export DOCKER_DISCORD_PY_OK=""
 
 for dockerdirectory in *; do
     if [ -d $dockerdirectory ]; then
         cd $dockerdirectory;
-        if ./upload.sh; then
-            DOCKER_DISCORD_PY_OK="$DOCKER_DISCORD_PY_OK\n$dockerdirectory";
-        else
-            DOCKER_DISCORD_PY_FAILED="$DOCKER_DISCORD_PY_FAILED\n$dockerdirectory";
-        fi
+        . ./upload.sh;
         cd ..;
     fi;
 done
 
-echo -e "\n\nUPLOAD OK: $DOCKER_DISCORD_PY_OK\n\nUPLOAD FAIL: $DOCKER_DISCORD_PY_FAILED"
+echo -e "\n\nUPLOAD OK: ${DOCKER_DISCORD_PY_OK:-.}\n\nUPLOAD FAIL: ${DOCKER_DISCORD_PY_FAILED:-.}"
 
 if [[ $DOCKER_DISCORD_PY_FAILED ]]; then
     exit 2;

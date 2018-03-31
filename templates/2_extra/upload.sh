@@ -2,5 +2,5 @@
 set -euo pipefail
 
 {% for version, distro in product(python_versions.keys(), distros.keys()) -%}
-docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build2-{{ mktag(version, distro) }}
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build2-{{ mktag(version, distro) }}; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD build2-{{ mktag(version, distro) }}"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD build2-{{ mktag(version, distro) }}"; fi
 {% endfor %}
