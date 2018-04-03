@@ -27,14 +27,14 @@ This is the base, and therefore smallest, image. It contains only `discord.py` w
 This is the default image. This contains some precompiled common dependencies, and as such, is much larger than the base image.
 
 These dependencies are:
--   {{ minor_deps|inline_codeblock }}
+-   {{ minor_deps.keys()|inline_codeblock }}
 
 This can help reduce bot installation time as packages that would otherwise take a long time to compile or acquire are already installed.
 
 ### `discord.py:extras`
 
 This image extends the `full` image with more dependencies:
--   {{ major_deps|inline_codeblock }}
+-   {{ major_deps.keys()|inline_codeblock }}
 
 This image is therefore the largest image and is only recommended if you use a large variety of these dependencies.
 

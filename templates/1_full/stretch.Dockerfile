@@ -16,7 +16,7 @@ RUN apt-get update && \
     # apt is so noisy
     > /dev/null && \
     # install minor deps
-    pip install -U {{ minor_deps|join(' ') }} -q --retries 30 && \
+    pip install -U {{ minor_deps.values()|join(' ') }} -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/lib/apt/lists/* && \

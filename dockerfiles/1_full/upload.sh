@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD build1-3.6.5-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD build1-3.6.5-stretch"; fi
-if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-slim-stretch; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD build1-3.6.5-slim-stretch"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD build1-3.6.5-slim-stretch"; fi
-if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-alpine; then export DOCKER_DISCORD_PY_OK="${DOCKER_DISCORD_PY_OK:-.}\nUPLOAD build1-3.6.5-alpine"; else export DOCKER_DISCORD_PY_FAILED="${DOCKER_DISCORD_PY_FAILED:-.}\nUPLOAD build1-3.6.5-alpine"; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-stretch; then echo -e "\nUPLOAD build1-3.6.5-stretch" >> ${DOCKER_DISCORD_PY_PASSTMP:-/dev/null}; else export echo -e "\nUPLOAD build1-3.6.5-stretch" >> ${DOCKER_DISCORD_PY_FAILTMP:-/dev/null}; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-slim-stretch; then echo -e "\nUPLOAD build1-3.6.5-slim-stretch" >> ${DOCKER_DISCORD_PY_PASSTMP:-/dev/null}; else export echo -e "\nUPLOAD build1-3.6.5-slim-stretch" >> ${DOCKER_DISCORD_PY_FAILTMP:-/dev/null}; fi
+if docker push ${DOCKER_UPLOAD_REPOSITORY:-gorialis}/discord.py:build1-3.6.5-alpine; then echo -e "\nUPLOAD build1-3.6.5-alpine" >> ${DOCKER_DISCORD_PY_PASSTMP:-/dev/null}; else export echo -e "\nUPLOAD build1-3.6.5-alpine" >> ${DOCKER_DISCORD_PY_FAILTMP:-/dev/null}; fi

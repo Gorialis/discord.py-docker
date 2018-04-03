@@ -19,40 +19,41 @@ checkouts:
   rewrite: ["1.0.0a", "1.0.0", "1.0", "rewrite"]
   async: ["0.16.12", "0.16", "async", ""]
 
+# these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
-  - asyncpg
-  - lxml
-  - matplotlib
-  - numpy
-  - Pillow
-  - psutil
-  - pycrypto
-  - pycryptodome
-  - ruamel.yaml
-  - uvloop
+  asyncpg: asyncpg
+  lxml: lxml
+  matplotlib: matplotlib
+  numpy: numpy
+  Pillow: Pillow
+  psutil: psutil
+  pycrypto: pycrypto
+  pycryptodome: pycryptodome
+  ruamel.yaml: ruamel.yaml
+  uvloop: uvloop
 
 major_deps:
-  - aiofiles
-  - aiomysql
-  - aioredis
-  - beautifulsoup4
-  - cairosvg
-  - click
-  - colorlog
-  - colorthief
-  - fuzzywuzzy[speedup]
-  - humanize
-  - lru-dict
-  - objgraph
-  - parsedatetime
-  - pytest-cov
-  - python-dateutil
-  - PyYAML
-  - sqlalchemy
-  - tabulate
-  - tox
-  - twine
-  - uvloop
-  - wand
-  - watchdog
-  - youtube-dl
+  aiofiles: aiofiles
+  aiomysql: aiomysql
+  aioredis: aioredis
+  beautifulsoup4: beautifulsoup4
+  cairosvg: cairosvg
+  click: click
+  colorlog: colorlog
+  colorthief: colorthief
+  fuzzywuzzy: fuzzywuzzy[speedup]
+  humanize: humanize
+  lru-dict: lru-dict
+  objgraph: objgraph
+  parsedatetime: parsedatetime
+  pytest-cov: pytest-cov
+  python-dateutil: python-dateutil
+  PyYAML: PyYAML
+  sqlalchemy: sqlalchemy
+  tabulate: tabulate
+  tox: tox
+  twine: twine
+  uvloop: uvloop
+  wand: wand
+  watchdog: watchdog
+  youtube-dl: youtube-dl
