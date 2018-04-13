@@ -88,8 +88,10 @@ if 'matplotlib' in installed_pkgs:
         matplotlib.use('Agg')
         import numpy as np
         import matplotlib.pyplot as plt
+        import matplotlib.tri as mtri
+        from cycler import cycler
         from matplotlib import cm
-        from mpl_toolkits.mplot3d import Axes3D
+        from mpl_toolkits.mplot3d.axes3d import Axes3D, get_test_data
         from io import BytesIO
 
         X = np.arange(-5, 5, 0.25)
@@ -98,15 +100,97 @@ if 'matplotlib' in installed_pkgs:
         R = np.sqrt(X**2 + Y**2)
         Z = np.sin(R)
 
-        fig = plt.figure()
-        ax = Axes3D(fig)
+        fig = plt.figure(figsize=(19.2, 14.4))
+        ax = fig.add_subplot(3, 3, 1, projection='3d')
         ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.viridis)
 
-        ax.set_title('matplotlib plot test')
+        ax.set_title('matplotlib')
+
+        ax2 = fig.add_subplot(3, 3, 2, projection='3d')
+        X, Y, Z = get_test_data(0.05)
+        ax2.plot_wireframe(X, Y, Z, rstride=5, cstride=5, linestyles='dashdot')
+
+        ax2.set_title('3d')
+
+        u = np.linspace(0, 2.0 * np.pi, endpoint=True, num=50)
+        v = np.linspace(-0.5, 0.5, endpoint=True, num=10)
+        u, v = np.meshgrid(u, v)
+        u, v = u.flatten(), v.flatten()
+
+        x = (1 + 0.5 * v * np.cos(u / 2.0)) * np.cos(u)
+        y = (1 + 0.5 * v * np.cos(u / 2.0)) * np.sin(u)
+        z = 0.5 * v * np.sin(u / 2.0)
+
+        tri = mtri.Triangulation(u, v)
+
+        ax3 = fig.add_subplot(3, 3, 3, projection='3d')
+        ax3.plot_trisurf(x, y, z, triangles=tri.triangles, cmap=cm.jet)
+
+        ax3.set_title('plot')
+
+        radii = np.linspace(0.125, 1.0, 8)
+        angles = np.linspace(0, 2*np.pi, 36, endpoint=False)
+
+        angles = np.repeat(angles[..., np.newaxis], 8, axis=1)
+
+        x = np.append(0, (radii*np.cos(angles)).flatten())
+        y = np.append(0, (radii*np.sin(angles)).flatten())
+
+        z = np.sin(-x*y)
+
+        ax4 = fig.add_subplot(3, 3, 4, projection='3d')
+        ax4.plot_trisurf(x, y, z, linewidth=0.2, cmap=cm.Spectral)
+
+        ax4.set_title('test')
+
+        X, Y, Z = get_test_data(0.05)
+        ax5 = fig.add_subplot(3, 3, 5, projection='3d')
+        cset = ax5.contour(X, Y, Z, extend3d=True, cmap=cm.coolwarm)
+
+        ax5.set_title('for')
+
+        ax6 = fig.add_subplot(3, 3, 6, projection='3d')
+
+        ax6.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
+        cset = ax6.contour(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
+        cset = ax6.contour(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
+        cset = ax6.contour(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
+
+        ax6.set_xlim(-40, 40)
+        ax6.set_ylim(-40, 40)
+        ax6.set_zlim(-100, 100)
+
+        ax6.set_title('docker')
+
+        theta = np.linspace(0.0, 2 * np.pi, 20, endpoint=False)
+        radii = 10 * np.random.rand(20)
+        width = np.pi / 4 * np.random.rand(20)
+
+        ax7 = fig.add_subplot(3, 3, 7, projection='polar')
+        bars = ax7.bar(theta, radii, width=width, bottom=0.0)
+
+        for r, bar in zip(radii, bars):
+            bar.set_facecolor(cm.viridis(r / 10.))
+            bar.set_alpha(0.5)
+
+        ax7.set_title('also this')
+
+        x = np.linspace(0, 2 * np.pi)
+        offsets = np.linspace(0, 2*np.pi, 4, endpoint=False)
+
+        yy = np.transpose([np.sin(x + phi) for phi in offsets])
+
+        ax8 = fig.add_subplot(3, 2, 6)
+        ax8.set_prop_cycle(cycler('color', ['r', 'g', 'b', 'y']) +
+                           cycler('linestyle', ['-', '--', ':', '-.']))
+
+        ax8.plot(yy)
+
+        ax8.set_title('and one of these too')
 
         # check it writes to buffer properly first
         out_buffer = BytesIO()
-        plt.savefig(out_buffer, dpi=80, format='png', bbox_inches='tight')
+        plt.savefig(out_buffer, dpi=160, format='png', bbox_inches='tight')
         out_buffer.seek(0)
 
         # write to file for good measure
