@@ -232,9 +232,11 @@ if 'matplotlib' in installed_pkgs:
         plt.savefig(out_buffer, dpi=160, format='png', bbox_inches='tight')
         out_buffer.seek(0)
 
+        assert out_buffer.read(4) == b'\x89PNG'
+
         # write to file for good measure
         with open('_test_plot_image.png', 'wb') as op:
-            op.write(out_buffer.read())
+            op.write(b'\x89PNG' + out_buffer.read())
 
 if 'aiofiles' in installed_pkgs:
     def test_has_aiofiles():

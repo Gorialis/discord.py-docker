@@ -58,7 +58,7 @@ CMD ["python", "bot.py"]
 You can use other tags if you need specific versions:
 
 ```dockerfile
-FROM gorialis/discord.py:3.6-alpine-0.16.12
+FROM gorialis/discord.py:3.6-alpine-0.16
 
 WORKDIR /app
 

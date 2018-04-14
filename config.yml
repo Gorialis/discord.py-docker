@@ -6,18 +6,18 @@
 # this is used to automatically generate the Dockerfiles, metadata and readme.
 
 python_versions:
-  3.6.5: ["3.6.5", "3.6", "3", ""]
+  3.6.5: ["3.6.5", "3.6", ""]
   #3.5.5: ["3.5.5", "3.5"] # dropped because no stretch image and libc has some issues
   #3.4.8: ["3.4.8", "3.4"] # dropped because not compatible with a lot of async drivers
 
 distros:
   stretch: ["stretch", ""]
-  slim-stretch: ["slim-stretch", "slim"]
+  slim-stretch: ["slim"]
   alpine: ["alpine"]
 
 checkouts:
-  rewrite: ["1.0.0a", "1.0", "rewrite"]
-  async: ["0.16.12", "0.16", "async", ""]
+  rewrite: ["1.0", "rewrite"]
+  async: ["0.16", "async", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
