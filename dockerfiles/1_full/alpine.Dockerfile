@@ -18,7 +18,7 @@ RUN apk update && \
     # wand
     imagemagick-dev && \
     # install minor deps
-    pip install -U asyncpg lxml matplotlib numpy Pillow psutil pycrypto pycryptodome ruamel.yaml uvloop -q --retries 30 && \
+    pip install -U asyncpg lxml matplotlib numpy Pillow psutil pycryptodome ruamel.yaml uvloop -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \

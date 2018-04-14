@@ -7,7 +7,7 @@ this script is used to determine if a container has built correctly or not
 """
 
 import sys
-from pip.operations.freeze import freeze
+from pip._internal.operations.freeze import freeze
 
 installed_pkgs = [x.split('==')[0].lower() for x in freeze()]
 
@@ -22,6 +22,11 @@ def test_has_discord():
     import discord
     client = discord.Client()
     client.loop.run_until_complete(client.close())
+
+    from discord.ext import commands
+    bot = commands.Bot('?')
+    assert hasattr(bot, 'on_message')
+    bot.loop.run_until_complete(bot.close())
 
 def test_has_voice():
     from discord.voice_client import has_nacl
@@ -39,10 +44,10 @@ if 'numpy' in installed_pkgs:
         c = (a.T @ a).reshape(25)
         assert all(b == [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9, 14])
         assert all(c == [125, 140, 155, 170, 185,
-                        140, 158, 176, 194, 212,
-                        155, 176, 197, 218, 239,
-                        170, 194, 218, 242, 266,
-                        185, 212, 239, 266, 293])
+                         140, 158, 176, 194, 212,
+                         155, 176, 197, 218, 239,
+                         170, 194, 218, 242, 266,
+                         185, 212, 239, 266, 293])
 
 if 'scipy' in installed_pkgs:
     def test_has_scipy():
@@ -82,6 +87,120 @@ if 'fuzzywuzzy' in installed_pkgs:
         assert guess == 'alpha'
         assert confidence < 50
 
+if 'pycryptodome' in installed_pkgs:
+    def test_has_pycryptodome():
+        from Crypto import Random
+        rndfile = Random.new()
+
+        from Crypto.Hash import SHA256
+        from hashlib import sha256
+
+        sha256_test = rndfile.read(1024)
+        sha256_factory = SHA256.new()
+        sha256_factory.update(sha256_test)
+        assert sha256(sha256_test).digest() == sha256_factory.digest()
+
+        from Crypto.Hash import SHA384
+        from hashlib import sha384
+
+        sha384_test = rndfile.read(1024)
+        sha384_factory = SHA384.new()
+        sha384_factory.update(sha384_test)
+        assert sha384(sha384_test).digest() == sha384_factory.digest()
+
+        from Crypto.Hash import SHA512
+        from hashlib import sha512
+
+        sha512_test = rndfile.read(1024)
+        sha512_factory = SHA512.new()
+        sha512_factory.update(sha512_test)
+        assert sha512(sha512_test).digest() == sha512_factory.digest()
+
+        from Crypto.Cipher import AES
+
+        aes_key = rndfile.read(AES.key_size[-1])
+        aes_iv = rndfile.read(AES.block_size)
+
+        aes_enc = AES.new(key=aes_key, mode=AES.MODE_CBC, iv=aes_iv)
+
+        aes_text = rndfile.read(1024)
+        aes_ciphertext = aes_enc.encrypt(aes_text)
+
+        aes_dec = AES.new(key=aes_key, mode=AES.MODE_CBC, iv=aes_iv)
+
+        aes_return = aes_dec.decrypt(aes_ciphertext)
+
+        assert aes_text != aes_ciphertext
+        assert aes_text == aes_return
+
+        from Crypto.Cipher import ARC2
+
+        arc2_key = rndfile.read(ARC2.key_size[-1])
+        arc2_iv = rndfile.read(ARC2.block_size)
+
+        arc2_enc = ARC2.new(key=arc2_key, mode=ARC2.MODE_CBC, iv=arc2_iv)
+
+        arc2_text = rndfile.read(1024)
+        arc2_ciphertext = arc2_enc.encrypt(arc2_text)
+
+        arc2_dec = ARC2.new(key=arc2_key, mode=ARC2.MODE_CBC, iv=arc2_iv)
+
+        arc2_return = arc2_dec.decrypt(arc2_ciphertext)
+
+        assert arc2_text != arc2_ciphertext
+        assert arc2_text == arc2_return
+
+        from Crypto.Cipher import Blowfish
+
+        blowfish_key = rndfile.read(Blowfish.key_size[-1])
+        blowfish_iv = rndfile.read(Blowfish.block_size)
+
+        blowfish_enc = Blowfish.new(key=blowfish_key, mode=Blowfish.MODE_CBC, iv=blowfish_iv)
+
+        blowfish_text = rndfile.read(1024)
+        blowfish_ciphertext = blowfish_enc.encrypt(blowfish_text)
+
+        blowfish_dec = Blowfish.new(key=blowfish_key, mode=Blowfish.MODE_CBC, iv=blowfish_iv)
+
+        blowfish_return = blowfish_dec.decrypt(blowfish_ciphertext)
+
+        assert blowfish_text != blowfish_ciphertext
+        assert blowfish_text == blowfish_return
+
+        from Crypto.Cipher import CAST
+
+        cast_key = rndfile.read(CAST.key_size[-1])
+        cast_iv = rndfile.read(CAST.block_size)
+
+        cast_enc = CAST.new(key=cast_key, mode=CAST.MODE_CBC, iv=cast_iv)
+
+        cast_text = rndfile.read(1024)
+        cast_ciphertext = cast_enc.encrypt(cast_text)
+
+        cast_dec = CAST.new(key=cast_key, mode=CAST.MODE_CBC, iv=cast_iv)
+
+        cast_return = cast_dec.decrypt(cast_ciphertext)
+
+        assert cast_text != cast_ciphertext
+        assert cast_text == cast_return
+
+        from Crypto.Cipher import DES3
+
+        des3_key = rndfile.read(DES3.key_size[-1])
+        des3_iv = rndfile.read(DES3.block_size)
+
+        des3_enc = DES3.new(key=des3_key, mode=DES3.MODE_CBC, iv=des3_iv)
+
+        des3_text = rndfile.read(1024)
+        des3_ciphertext = des3_enc.encrypt(des3_text)
+
+        des3_dec = DES3.new(key=des3_key, mode=DES3.MODE_CBC, iv=des3_iv)
+
+        des3_return = des3_dec.decrypt(des3_ciphertext)
+
+        assert des3_text != des3_ciphertext
+        assert des3_text == des3_return
+
 if 'matplotlib' in installed_pkgs:
     def test_has_matplotlib():
         import matplotlib
@@ -91,7 +210,7 @@ if 'matplotlib' in installed_pkgs:
         import matplotlib.tri as mtri
         from cycler import cycler
         from matplotlib import cm
-        from mpl_toolkits.mplot3d.axes3d import Axes3D, get_test_data
+        from mpl_toolkits.mplot3d.axes3d import get_test_data
         from io import BytesIO
 
         X = np.arange(-5, 5, 0.25)
@@ -145,16 +264,16 @@ if 'matplotlib' in installed_pkgs:
 
         X, Y, Z = get_test_data(0.05)
         ax5 = fig.add_subplot(3, 3, 5, projection='3d')
-        cset = ax5.contour(X, Y, Z, extend3d=True, cmap=cm.coolwarm)
+        ax5.contour(X, Y, Z, extend3d=True, cmap=cm.coolwarm)
 
         ax5.set_title('for')
 
         ax6 = fig.add_subplot(3, 3, 6, projection='3d')
 
         ax6.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
-        cset = ax6.contour(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
-        cset = ax6.contour(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
-        cset = ax6.contour(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
 
         ax6.set_xlim(-40, 40)
         ax6.set_ylim(-40, 40)
@@ -247,14 +366,14 @@ if 'lxml' in installed_pkgs:
         from lxml import etree
 
         root = etree.Element('root')
-        a = etree.SubElement(root, 'a')
-        b = etree.SubElement(root, 'b')
+        etree.SubElement(root, 'a')
+        etree.SubElement(root, 'b')
         c = etree.SubElement(root, 'c')
         d = etree.SubElement(c, 'd')
         e = etree.SubElement(d, 'e')
         e.text = 'test'
         tree = etree.ElementTree(root)
-        
+
         assert etree.tostring(tree) == b'<root><a/><b/><c><d><e>test</e></d></c></root>'
 
 if 'beautifulsoup4' in installed_pkgs:

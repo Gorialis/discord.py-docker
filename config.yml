@@ -16,7 +16,7 @@ distros:
   alpine: ["alpine"]
 
 checkouts:
-  rewrite: ["1.0.0a", "1.0.0", "1.0", "rewrite"]
+  rewrite: ["1.0.0a", "1.0", "rewrite"]
   async: ["0.16.12", "0.16", "async", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
@@ -27,7 +27,6 @@ minor_deps:
   numpy: numpy
   Pillow: Pillow
   psutil: psutil
-  pycrypto: pycrypto
   pycryptodome: pycryptodome
   ruamel.yaml: ruamel.yaml
   uvloop: uvloop

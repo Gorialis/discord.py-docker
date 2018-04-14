@@ -7,7 +7,7 @@ this script is used to determine if a container has built correctly or not
 """
 
 import sys
-from pip.operations.freeze import freeze
+from pip._internal.operations.freeze import freeze
 
 installed_pkgs = [x.split('==')[0].lower() for x in freeze()]
 
@@ -22,6 +22,11 @@ def test_has_discord():
     import discord
     client = discord.Client()
     client.loop.run_until_complete(client.close())
+
+    from discord.ext import commands
+    bot = commands.Bot('?')
+    assert hasattr(bot, 'on_message')
+    bot.loop.run_until_complete(bot.close())
 
 def test_has_voice():
     from discord.voice_client import has_nacl
@@ -39,10 +44,10 @@ if 'numpy' in installed_pkgs:
         c = (a.T @ a).reshape(25)
         assert all(b == [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9, 14])
         assert all(c == [125, 140, 155, 170, 185,
-                        140, 158, 176, 194, 212,
-                        155, 176, 197, 218, 239,
-                        170, 194, 218, 242, 266,
-                        185, 212, 239, 266, 293])
+                         140, 158, 176, 194, 212,
+                         155, 176, 197, 218, 239,
+                         170, 194, 218, 242, 266,
+                         185, 212, 239, 266, 293])
 
 if 'scipy' in installed_pkgs:
     def test_has_scipy():
@@ -82,6 +87,40 @@ if 'fuzzywuzzy' in installed_pkgs:
         assert guess == 'alpha'
         assert confidence < 50
 
+if 'pycryptodome' in installed_pkgs:
+    def test_has_pycryptodome():
+        from Crypto import Random
+        rndfile = Random.new()
+        {%- for hash_type in ['SHA256', 'SHA384', 'SHA512'] %}
+
+        from Crypto.Hash import {{ hash_type }}
+        from hashlib import {{ hash_type|lower }}
+
+        {{ hash_type|lower }}_test = rndfile.read(1024)
+        {{ hash_type|lower }}_factory = {{ hash_type }}.new()
+        {{ hash_type|lower }}_factory.update({{ hash_type|lower }}_test)
+        assert {{ hash_type|lower }}({{ hash_type|lower }}_test).digest() == {{ hash_type|lower }}_factory.digest()
+        {%- endfor %}
+        {%- for cipher_type in ['AES', 'ARC2', 'Blowfish', 'CAST', 'DES3'] %}
+
+        from Crypto.Cipher import {{ cipher_type }}
+
+        {{ cipher_type|lower }}_key = rndfile.read({{ cipher_type }}.key_size[-1])
+        {{ cipher_type|lower }}_iv = rndfile.read({{ cipher_type }}.block_size)
+
+        {{ cipher_type|lower }}_enc = {{ cipher_type }}.new(key={{ cipher_type|lower }}_key, mode={{ cipher_type }}.MODE_CBC, iv={{ cipher_type|lower }}_iv)
+
+        {{ cipher_type|lower }}_text = rndfile.read(1024)
+        {{ cipher_type|lower }}_ciphertext = {{ cipher_type|lower }}_enc.encrypt({{ cipher_type|lower }}_text)
+
+        {{ cipher_type|lower }}_dec = {{ cipher_type }}.new(key={{ cipher_type|lower }}_key, mode={{ cipher_type }}.MODE_CBC, iv={{ cipher_type|lower }}_iv)
+
+        {{ cipher_type|lower }}_return = {{ cipher_type|lower }}_dec.decrypt({{ cipher_type|lower }}_ciphertext)
+
+        assert {{ cipher_type|lower }}_text != {{ cipher_type|lower }}_ciphertext
+        assert {{ cipher_type|lower }}_text == {{ cipher_type|lower }}_return
+        {%- endfor %}
+
 if 'matplotlib' in installed_pkgs:
     def test_has_matplotlib():
         import matplotlib
@@ -91,7 +130,7 @@ if 'matplotlib' in installed_pkgs:
         import matplotlib.tri as mtri
         from cycler import cycler
         from matplotlib import cm
-        from mpl_toolkits.mplot3d.axes3d import Axes3D, get_test_data
+        from mpl_toolkits.mplot3d.axes3d import get_test_data
         from io import BytesIO
 
         X = np.arange(-5, 5, 0.25)
@@ -145,16 +184,16 @@ if 'matplotlib' in installed_pkgs:
 
         X, Y, Z = get_test_data(0.05)
         ax5 = fig.add_subplot(3, 3, 5, projection='3d')
-        cset = ax5.contour(X, Y, Z, extend3d=True, cmap=cm.coolwarm)
+        ax5.contour(X, Y, Z, extend3d=True, cmap=cm.coolwarm)
 
         ax5.set_title('for')
 
         ax6 = fig.add_subplot(3, 3, 6, projection='3d')
 
         ax6.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
-        cset = ax6.contour(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
-        cset = ax6.contour(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
-        cset = ax6.contour(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='z', offset=-100, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='x', offset=-40, cmap=cm.coolwarm)
+        ax6.contour(X, Y, Z, zdir='y', offset=40, cmap=cm.coolwarm)
 
         ax6.set_xlim(-40, 40)
         ax6.set_ylim(-40, 40)
@@ -247,14 +286,14 @@ if 'lxml' in installed_pkgs:
         from lxml import etree
 
         root = etree.Element('root')
-        a = etree.SubElement(root, 'a')
-        b = etree.SubElement(root, 'b')
+        etree.SubElement(root, 'a')
+        etree.SubElement(root, 'b')
         c = etree.SubElement(root, 'c')
         d = etree.SubElement(c, 'd')
         e = etree.SubElement(d, 'e')
         e.text = 'test'
         tree = etree.ElementTree(root)
-        
+
         assert etree.tostring(tree) == b'<root><a/><b/><c><d><e>test</e></d></c></root>'
 
 if 'beautifulsoup4' in installed_pkgs:
