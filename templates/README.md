@@ -13,6 +13,7 @@
 {% for version, distro, checkout, stage in product(python_versions.items(), distros.items(), checkouts.items(), [[0, ['minimal']], [1, ['full', '']], [2, ['extras']]]) -%}
 -   {{ product(version[1], distro[1], checkout[1], stage[1])|map('mktag_l')|inline_codeblock }} (*[{{ distro[0] }}](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/0_base/{{ distro[0] }}.Dockerfile):[{{ stage[1][0] }}](https://github.com/Gorialis/discord.py-docker/tree/master/dockerfiles/{{ stage[0] }}_{{ stage[1][0] }}/)*)
 {% endfor %}
+*({{ len(python_versions.keys()) * len(distros.keys()) * len(checkouts.keys()) * 3 }} variants, {{ len(unchain(python_versions.values())) * len(unchain(distros.values())) * len(unchain(checkouts.values())) * 4 }} tags)*
 
 ## Image variants
 

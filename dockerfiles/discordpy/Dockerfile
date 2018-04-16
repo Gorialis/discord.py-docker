@@ -6,8 +6,10 @@
 ARG PYTHON_VERSION
 ARG DISTRO
 ARG BUILD_STAGE
-ARG CHECKOUT
+
 FROM discord.py:build$BUILD_STAGE-$PYTHON_VERSION-$DISTRO
+
+ARG CHECKOUT
 
 # install d.py
 RUN pip install -U git+https://github.com/Rapptz/discord.py@$CHECKOUT#egg=discord.py[voice,docs] -q --retries 30

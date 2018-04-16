@@ -40,7 +40,9 @@ extension_funcs = {
     'unchain': lambda m: list(chain(*m)),
     'mktag': mktag,
     'mktag_l': lambda x: mktag(*x),
-    'product':product
+    'product': product,
+    'list': list,
+    'len': len
 }
 
 env.filters.update(**extension_funcs)

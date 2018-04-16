@@ -30,6 +30,7 @@ minor_deps:
   pycryptodome: pycryptodome
   ruamel.yaml: ruamel.yaml
   uvloop: uvloop
+  youtube-dl: youtube-dl
 
 major_deps:
   aiofiles: aiofiles
@@ -55,4 +56,3 @@ major_deps:
   uvloop: uvloop
   wand: wand
   watchdog: watchdog
-  youtube-dl: youtube-dl
