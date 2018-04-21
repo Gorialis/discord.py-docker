@@ -7,6 +7,8 @@ FROM discord.py:build$BUILD_STAGE-$PYTHON_VERSION-$DISTRO
 
 ARG CHECKOUT
 
+WORKDIR /tmp/tests
+
 COPY tests.py /tmp/tests/runtest.py
 
 RUN test $CHECKOUT && \
