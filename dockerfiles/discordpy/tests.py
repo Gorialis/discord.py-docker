@@ -20,6 +20,8 @@ if 'uvloop' in installed_pkgs:
 
 def test_has_discord():
     import discord
+    assert discord.__version__
+
     client = discord.Client()
     client.loop.run_until_complete(client.close())
 
@@ -317,21 +319,6 @@ if 'matplotlib' in installed_pkgs:
         # write to file for good measure
         with open('_test_plot_image.png', 'wb') as op:
             op.write(b'\x89PNG' + out_buffer.read())
-
-if 'aiofiles' in installed_pkgs:
-    def test_has_aiofiles():
-        import asyncio
-        import aiofiles
-
-        async def run_test():
-            async with aiofiles.open('_test_read_write.txt', 'w', encoding='utf8') as f:
-                await f.write('this is test sample text for aiofiles')
-
-            async with aiofiles.open('_test_read_write.txt', 'r', encoding='utf8') as f:
-                text = await f.read()
-                assert text == 'this is test sample text for aiofiles'
-
-        asyncio.get_event_loop().run_until_complete(run_test())
 
 if 'pillow' in installed_pkgs:
     def test_has_pillow():

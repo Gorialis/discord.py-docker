@@ -33,7 +33,6 @@ minor_deps:
   youtube-dl: youtube-dl
 
 major_deps:
-  aiofiles: aiofiles
   aiomysql: aiomysql
   aioredis: aioredis
   beautifulsoup4: beautifulsoup4
