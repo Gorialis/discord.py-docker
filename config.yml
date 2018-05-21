@@ -22,12 +22,15 @@ checkouts:
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
   asyncpg: asyncpg
+  coverage: coverage
+  flake8: flake8
   lxml: lxml
   matplotlib: matplotlib
   numpy: numpy
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
+  pytest-cov: pytest-cov
   ruamel.yaml: ruamel.yaml
   uvloop: uvloop
   youtube-dl: youtube-dl
@@ -45,7 +48,6 @@ major_deps:
   lru-dict: lru-dict
   objgraph: objgraph
   parsedatetime: parsedatetime
-  pytest-cov: pytest-cov
   python-dateutil: python-dateutil
   PyYAML: PyYAML
   sqlalchemy: sqlalchemy
