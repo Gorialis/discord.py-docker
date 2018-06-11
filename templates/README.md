@@ -11,7 +11,7 @@
 ## Tags and respective `Dockerfile` links
 
 {% for version, distro, checkout, stage in variations -%}
--   {{ get_tags(version, distro, checkout, stage)|map('mktag_l')|inline_codeblock }} (*[{{ distro[0] }}](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/0_base/{{ distro[0] }}.Dockerfile):[{{ stage[1][0] }}](https://github.com/Gorialis/discord.py-docker/tree/master/dockerfiles/{{ stage[0] }}_{{ stage[1][0] }}/)*)
+-   {{ get_tags(version, distro, checkout, stage)|map('mktag_l')|inline_codeblock }} (*[{{ distro[0] }}](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/0_minimal/{{ distro[0] }}.Dockerfile):[{{ stage[1][0] }}](https://github.com/Gorialis/discord.py-docker/tree/master/dockerfiles/{{ stage[0] }}_{{ stage[1][0] }}/)*)
 {% endfor %}
 *({{ len(variations) }} variants, {{ len(unchain(tags)) }} tags)*
 
