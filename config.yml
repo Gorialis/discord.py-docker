@@ -26,7 +26,6 @@ minor_deps:
   coverage: coverage
   flake8: flake8
   lxml: lxml
-  matplotlib: matplotlib
   numpy: git+https://github.com/numpy/numpy@maintenance/1.14.x#egg=numpy
   Pillow: Pillow
   psutil: psutil
