@@ -30,9 +30,28 @@ from jinja2 import Environment, FileSystemLoader
 from os import makedirs, path, walk
 from yaml import safe_load
 
+with open('config.yml', 'rb') as fp:
+    config = safe_load(fp)
+
 env = Environment(loader=FileSystemLoader('templates'))
 
 mktag = lambda *x: '-'.join(filter(None, map(str, x))) or 'latest'
+
+def get_variations():
+    py_v = config['python_versions']
+    distros = config['distros']
+    checkouts = config['checkouts']
+    stages = config['stage_types']
+
+    for version, distro, checkout, stage in product(py_v.items(), distros.items(), checkouts.items(), stages.items()):
+        if checkout[0] == 'async' and any([rc_stage in version[0] for rc_stage in ['a', 'b', 'rc']]):
+            continue
+        
+        yield version, distro, checkout, stage
+
+def get_tags(args):
+    py_v, distro, checkout, stage = args
+    return list(product(py_v[1], distro[1], checkout[1], stage[1]))
 
 # functions for template context
 extension_funcs = {
@@ -42,14 +61,16 @@ extension_funcs = {
     'mktag_l': lambda x: mktag(*x),
     'product': product,
     'list': list,
-    'len': len
+    'len': len,
+    'get_variations': get_variations,
+    'variations': list(get_variations()),
+    'get_tags': lambda *x: get_tags(x),
+    'get_tags_l': get_tags,
+    'tags': list(map(get_tags, get_variations()))
 }
 
 env.filters.update(**extension_funcs)
 env.globals.update(**extension_funcs)
-
-with open('config.yml', 'rb') as fp:
-    config = safe_load(fp)
 
 now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 

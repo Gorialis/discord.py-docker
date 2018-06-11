@@ -27,7 +27,7 @@ minor_deps:
   flake8: flake8
   lxml: lxml
   matplotlib: matplotlib
-  numpy: numpy
+  numpy: git+https://github.com/numpy/numpy@maintenance/1.14.x#egg=numpy
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
@@ -58,3 +58,8 @@ major_deps:
   uvloop: uvloop
   wand: wand
   watchdog: watchdog
+
+stage_types:
+  0: ['minimal']
+  1: ['full', '']
+  2: ['extras']
