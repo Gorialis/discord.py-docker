@@ -49,7 +49,6 @@ major_deps:
   objgraph: objgraph
   parsedatetime: parsedatetime
   python-dateutil: python-dateutil
-  PyYAML: PyYAML
   sqlalchemy: sqlalchemy
   tabulate: tabulate
   tox: tox

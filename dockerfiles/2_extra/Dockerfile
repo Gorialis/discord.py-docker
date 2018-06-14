@@ -8,7 +8,7 @@ ARG DISTRO
 FROM discord.py:build1-$PYTHON_VERSION-$DISTRO
 
 # install major deps
-RUN pip install -U aiomysql aioredis beautifulsoup4 cairosvg click colorlog colorthief fuzzywuzzy[speedup] humanize lru-dict objgraph parsedatetime python-dateutil PyYAML sqlalchemy tabulate tox twine uvloop wand watchdog -q --retries 30 && \
+RUN pip install -U aiomysql aioredis beautifulsoup4 cairosvg click colorlog colorthief fuzzywuzzy[speedup] humanize lru-dict objgraph parsedatetime python-dateutil sqlalchemy tabulate tox twine uvloop wand watchdog -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \

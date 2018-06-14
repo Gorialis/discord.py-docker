@@ -9,7 +9,7 @@ FROM python:$PYTHON_VERSION-alpine
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2018-06-11 19:32:40 UTC"
+LABEL creation_time="2018-06-14 19:06:31 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -20,7 +20,7 @@ RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 RUN apk update && \
     # basic deps
-    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base linux-headers \
+    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers \
     # voice support
     libffi-dev libsodium-dev opus-dev && \
     # update pip, install Cython & pytest

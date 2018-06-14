@@ -10,7 +10,7 @@ RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 RUN apk update && \
     # basic deps
-    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base linux-headers \
+    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers xz \
     # voice support
     libffi-dev libsodium-dev opus-dev && \
     # update pip, install Cython & pytest
