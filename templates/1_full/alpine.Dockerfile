@@ -23,8 +23,8 @@ RUN apk update && \
     tar -xf ImageMagick-6.9.10-0.tar.xz && \
     cd ImageMagick-6.9.10-0 && \
     ./configure -q && \
-    make -j "$(nproc)" && \
-    make install && \
+    make -j "$(nproc)" | grep -v -E "^.*(CC|CXX|is deprecated).*$" && \
+    make install | grep -v -E "^.*(/usr/bin/install|install:|config/install-sh|mkdir|ln -s|(^|\s)cp(\s|$)).*$" && \
     ldconfig /usr/local/lib && \
     cd / && \
     rm -rf $IM_BUILD_HOME && \
