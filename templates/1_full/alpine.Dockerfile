@@ -16,9 +16,9 @@ RUN apk update && \
     cd $IM_BUILD_HOME && \
     wget https://www.imagemagick.org/download/ImageMagick-6.9.10-0.tar.xz && \
     wget https://www.imagemagick.org/download/ImageMagick-6.9.10-0.tar.xz.asc && \
-    ## bizarrely required to use gpg at least once before importing keys
-    gpg --help > /dev/null && \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "89AB63D48277377A" && \
+    ## bizarrely this often fails on the first try
+    (gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "89AB63D48277377A"; \
+    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "89AB63D48277377A") && \
     gpg --batch --verify ImageMagick-6.9.10-0.tar.xz.asc ImageMagick-6.9.10-0.tar.xz && \
     tar -xf ImageMagick-6.9.10-0.tar.xz && \
     cd ImageMagick-6.9.10-0 && \
