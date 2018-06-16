@@ -70,7 +70,9 @@ if 'scipy' in installed_pkgs:
 
 if 'pyyaml' in installed_pkgs:
     def test_has_pyyaml():
-        from yaml import safe_load
+        from random import randint
+
+        from yaml import safe_load, dump
 
         data = safe_load('- 123\n- "quoted text"\n- unquoted text\n- sample: |\n    some text right here')
 
@@ -79,6 +81,32 @@ if 'pyyaml' in installed_pkgs:
         assert data[2] == 'unquoted text'
         assert isinstance(data[3], dict)
         assert data[3]['sample'].strip() == 'some text right here'
+
+        random_data = [randint(0, 1000) for x in range(200)]
+        assert safe_load(dump(random_data)) == random_data
+
+if 'ruamel.yaml' in installed_pkgs:
+    def test_has_ruamel():
+        from random import randint
+        from io import StringIO
+
+        from ruamel.yaml import YAML
+
+        yaml = YAML(typ='safe')
+        data = yaml.load('- 123\n- "quoted text"\n- unquoted text\n- sample: |\n    some text right here')
+
+        assert data[0] == 123
+        assert data[1] == 'quoted text'
+        assert data[2] == 'unquoted text'
+        assert isinstance(data[3], dict)
+        assert data[3]['sample'].strip() == 'some text right here'
+
+        buff = StringIO()
+
+        random_data = [randint(0, 1000) for x in range(200)]
+        yaml.dump(random_data, buff)
+        buff.seek(0)
+        assert yaml.load(buff) == random_data
 
 if 'fuzzywuzzy' in installed_pkgs:
     def test_has_fuzzywuzzy():

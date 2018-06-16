@@ -6,7 +6,7 @@ variables:
 
 before_script:
   - docker info
-  - apk add --no-cache python3 bash git
+  - apk add --no-cache python3 python3-dev bash git alpine-sdk
   - echo -e $SECRET_DOCKER_LOGIN_PASSWORD | docker login --username $SECRET_DOCKER_LOGIN_USERNAME --password-stdin
 
 after_script:

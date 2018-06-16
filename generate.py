@@ -28,10 +28,12 @@ from datetime import datetime
 from itertools import chain, product
 from jinja2 import Environment, FileSystemLoader
 from os import makedirs, path, walk
-from yaml import safe_load
+from ruamel.yaml import YAML
+
+yaml = YAML(typ='safe')
 
 with open('config.yml', 'rb') as fp:
-    config = safe_load(fp)
+    config = yaml.load(fp)
 
 env = Environment(loader=FileSystemLoader('templates'))
 
