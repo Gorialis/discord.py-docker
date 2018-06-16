@@ -322,11 +322,14 @@ if 'beautifulsoup4' in installed_pkgs:
 
 if 'wand' in installed_pkgs:
     def test_wand():
+        import wand
+
         from wand.color import Color
         from wand.image import Image
 
         with Image(width=500, height=500) as outer:
-            with Image(width=250, height=250, background=Color('#f00')) as red_inner:
+            background_color = Color('#f00')
+            with Image(width=250, height=250, background=background_color) as red_inner:
                 outer.composite(red_inner, left=125, top=125)
             with outer.convert('png') as converted:
                 converted.save(filename='_test_wand.png')

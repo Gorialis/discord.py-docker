@@ -55,7 +55,6 @@ major_deps:
   twine: twine
   uvloop: uvloop
   wand: wand
-  watchdog: watchdog
 
 stage_types:
   0: ['minimal']

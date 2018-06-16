@@ -402,6 +402,8 @@ if 'beautifulsoup4' in installed_pkgs:
 
 if 'wand' in installed_pkgs:
     def test_wand():
+        import wand
+
         from wand.color import Color
         from wand.image import Image
 

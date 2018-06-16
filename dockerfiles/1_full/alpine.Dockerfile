@@ -14,8 +14,9 @@ RUN apk update && \
     # cairosvg
     cairo-dev \
     # Pillow
-    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev && \
+    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev \
     # wand
+    fontconfig libltdl libxext ghostscript glib libbz2 libgcc libgomp libjpeg-turbo librsvg libwebp libx11 musl pango && \
     export IM_BUILD_HOME=$(mktemp -d) && \
     cd $IM_BUILD_HOME && \
     wget https://www.imagemagick.org/download/ImageMagick-6.9.10-0.tar.xz && \
