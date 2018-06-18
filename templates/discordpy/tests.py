@@ -40,39 +40,6 @@ def test_has_voice():
     assert is_loaded()
 
 
-if 'numpy' in INSTALLED_PKGS:
-    def test_has_numpy():
-        import numpy as np
-
-        a = np.arange(15).reshape(3, 5)
-        b = a.T.reshape(15)
-        c = (a.T @ a).reshape(25)
-        assert all(b == [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9, 14])
-        assert all(c == [125, 140, 155, 170, 185,
-                         140, 158, 176, 194, 212,
-                         155, 176, 197, 218, 239,
-                         170, 194, 218, 242, 266,
-                         185, 212, 239, 266, 293])
-
-
-if 'scipy' in INSTALLED_PKGS:
-    def test_has_scipy():
-        from scipy import integrate
-
-        def f(x):
-            # dy/dx = 4x^3 + 6x^2
-            # so
-            # y = x^4 + 2x^3
-            return (4 * (x ** 3)) + (6 * (x ** 2))
-
-        # where x = 1, y = 1^4 + 2*(1^4) = 1 + 2 = 3
-        # where x = 2, y = 2^4 + 2*(2^4) = 16 + 16 = 32
-        # so integrating between 1 and 2 for dy/dx gives us 3 - 32 = 29
-        answer, error = integrate.quad(f, 1, 2)
-        # check within bounds
-        assert (answer + error) >= 29 and (answer - error) <= 29
-
-
 if 'pyyaml' in INSTALLED_PKGS:
     def test_has_pyyaml():
         from inspect import cleandoc
@@ -172,6 +139,134 @@ if 'pycryptodome' in INSTALLED_PKGS:
         assert {{ cipher_type|lower }}_text != {{ cipher_type|lower }}_ciphertext
         assert {{ cipher_type|lower }}_text == {{ cipher_type|lower }}_return
         {%- endfor %}
+
+
+if 'pillow' in INSTALLED_PKGS:
+    def test_has_pillow():
+        import colorsys
+        import itertools
+        from PIL import Image, ImageChops
+
+        data = bytes([int(x*255) for x in itertools.chain(*[colorsys.hsv_to_rgb(x / 255, 1, 1) for x in range(256)])])
+
+        with Image.frombytes('RGB', (256, 1), data).resize((256, 100), Image.ANTIALIAS) as im:
+            # write standard PNG file
+            im.save('_test_pillow.png', 'png')
+            # test quantization
+            quantized = im.quantize()
+            # write paletted BMP file
+            quantized.save('_test_pillow.bmp', 'bmp')
+            # write paletted GIF file
+            quantized.save('_test_pillow.gif', 'gif')
+            # double quantization
+            quantized2 = im.quantize(colors=16)
+            # write paletted BMP file
+            quantized2.save('_test_pillow_2.bmp', 'bmp')
+            # write paletted GIF file
+            quantized2.save('_test_pillow_2.gif', 'gif')
+
+            r, g, b = im.split()
+            a = ImageChops.add(r, b, scale=2)
+            im2 = Image.merge('RGBA', (r, g, b, a))
+            # write transparent PNG file
+            im2.save('_test_pillow_2.png', 'png')
+
+
+if 'lxml' in INSTALLED_PKGS:
+    def test_lxml():
+        from lxml import etree
+
+        root = etree.Element('root')
+        etree.SubElement(root, 'a')
+        etree.SubElement(root, 'b')
+        c = etree.SubElement(root, 'c')
+        d = etree.SubElement(c, 'd')
+        e = etree.SubElement(d, 'e')
+        e.text = 'test'
+        tree = etree.ElementTree(root)
+
+        assert etree.tostring(tree) == b'<root><a/><b/><c><d><e>test</e></d></c></root>'
+
+
+if 'beautifulsoup4' in INSTALLED_PKGS:
+    def test_bs4():
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup('<html><head><title>test title</title></head>\n<body><b>test</b> text</body></html>', 'html.parser')
+        assert soup.title.string == 'test title'
+        assert soup.get_text() == 'test title\ntest text'
+
+
+{%- for db in ['aiomysql', 'aioredis', 'asyncpg'] %}
+
+
+if '{{ db }}' in INSTALLED_PKGS:
+    def test_db_{{ db }}_shallow():
+        import {{ db }}
+        assert {{ db }}.__version__
+
+{%- endfor %}
+
+
+if 'wand' in INSTALLED_PKGS:
+    def test_wand():
+        from wand.color import Color
+        from wand.drawing import Drawing
+        from wand.image import Image
+
+        with Image(width=500, height=500) as outer:
+            background_color = Color('#f00')
+            with Image(width=250, height=250, background=background_color) as red_inner:
+                outer.composite(red_inner, left=125, top=125)
+            with outer.convert('png') as converted:
+                converted.save(filename='_test_wand.png')
+
+        with Drawing() as draw:
+            draw.stroke_color = Color('black')
+            draw.stroke_width = 2
+            draw.fill_color = Color('white')
+            draw.arc(
+                (25, 25),
+                (75, 75),
+                (135, -45)
+            )
+
+            with Image(width=100, height=100, background=Color('lightblue')) as im:
+                draw.draw(im)
+                with im.convert('png') as converted:
+                    converted.save(filename='_test_wand_2.png')
+
+
+if 'numpy' in INSTALLED_PKGS:
+    def test_has_numpy():
+        import numpy as np
+
+        a = np.arange(15).reshape(3, 5)
+        b = a.T.reshape(15)
+        c = (a.T @ a).reshape(25)
+        assert all(b == [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9, 14])
+        assert all(c == [125, 140, 155, 170, 185,
+                         140, 158, 176, 194, 212,
+                         155, 176, 197, 218, 239,
+                         170, 194, 218, 242, 266,
+                         185, 212, 239, 266, 293])
+
+
+if 'scipy' in INSTALLED_PKGS:
+    def test_has_scipy():
+        from scipy import integrate
+
+        def f(x):
+            # dy/dx = 4x^3 + 6x^2
+            # so
+            # y = x^4 + 2x^3
+            return (4 * (x ** 3)) + (6 * (x ** 2))
+
+        # where x = 1, y = 1^4 + 2*(1^4) = 1 + 2 = 3
+        # where x = 2, y = 2^4 + 2*(2^4) = 16 + 16 = 32
+        # so integrating between 1 and 2 for dy/dx gives us 3 - 32 = 29
+        answer, error = integrate.quad(f, 1, 2)
+        # check within bounds
+        assert (answer + error) >= 29 and (answer - error) <= 29
 
 
 if 'matplotlib' in INSTALLED_PKGS:
@@ -291,96 +386,4 @@ if 'matplotlib' in INSTALLED_PKGS:
         with open('_test_plot_image.png', 'wb') as op:
             op.write(b'\x89PNG' + out_buffer.read())
 
-
-if 'pillow' in INSTALLED_PKGS:
-    def test_has_pillow():
-        import colorsys
-        import itertools
-        from PIL import Image, ImageChops
-
-        data = bytes([int(x*255) for x in itertools.chain(*[colorsys.hsv_to_rgb(x / 255, 1, 1) for x in range(256)])])
-
-        with Image.frombytes('RGB', (256, 1), data).resize((256, 100), Image.ANTIALIAS) as im:
-            # write standard PNG file
-            im.save('_test_pillow.png', 'png')
-            # test quantization
-            quantized = im.quantize()
-            # write paletted BMP file
-            quantized.save('_test_pillow.bmp', 'bmp')
-            # write paletted GIF file
-            quantized.save('_test_pillow.gif', 'gif')
-            # double quantization
-            quantized2 = im.quantize(colors=16)
-            # write paletted BMP file
-            quantized2.save('_test_pillow_2.bmp', 'bmp')
-            # write paletted GIF file
-            quantized2.save('_test_pillow_2.gif', 'gif')
-
-            r, g, b = im.split()
-            a = ImageChops.add(r, b, scale=2)
-            im2 = Image.merge('RGBA', (r, g, b, a))
-            # write transparent PNG file
-            im2.save('_test_pillow_2.png', 'png')
-
-
-if 'lxml' in INSTALLED_PKGS:
-    def test_lxml():
-        from lxml import etree
-
-        root = etree.Element('root')
-        etree.SubElement(root, 'a')
-        etree.SubElement(root, 'b')
-        c = etree.SubElement(root, 'c')
-        d = etree.SubElement(c, 'd')
-        e = etree.SubElement(d, 'e')
-        e.text = 'test'
-        tree = etree.ElementTree(root)
-
-        assert etree.tostring(tree) == b'<root><a/><b/><c><d><e>test</e></d></c></root>'
-
-
-if 'beautifulsoup4' in INSTALLED_PKGS:
-    def test_bs4():
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup('<html><head><title>test title</title></head>\n<body><b>test</b> text</body></html>', 'html.parser')
-        assert soup.title.string == 'test title'
-        assert soup.get_text() == 'test title\ntest text'
-
-
-if 'wand' in INSTALLED_PKGS:
-    def test_wand():
-        from wand.color import Color
-        from wand.drawing import Drawing
-        from wand.image import Image
-
-        with Image(width=500, height=500) as outer:
-            background_color = Color('#f00')
-            with Image(width=250, height=250, background=background_color) as red_inner:
-                outer.composite(red_inner, left=125, top=125)
-            with outer.convert('png') as converted:
-                converted.save(filename='_test_wand.png')
-
-        with Drawing() as draw:
-            draw.stroke_color = Color('black')
-            draw.stroke_width = 2
-            draw.fill_color = Color('white')
-            draw.arc(
-                (25, 25),
-                (75, 75),
-                (135, -45)
-            )
-
-            with Image(width=100, height=100, background=Color('lightblue')) as im:
-                draw.draw(im)
-                with im.convert('png') as converted:
-                    converted.save(filename='_test_wand_2.png')
-
-{%- for db in ['aiomysql', 'aioredis', 'asyncpg'] %}
-
-
-if '{{ db }}' in INSTALLED_PKGS:
-    def test_db_{{ db }}_shallow():
-        import {{ db }}
-        assert {{ db }}.__version__
-
-{%- endfor %}{{ '\n' }}
+{{ '' }}

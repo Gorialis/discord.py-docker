@@ -31,6 +31,7 @@ minor_deps:
   psutil: psutil
   pycryptodome: pycryptodome
   pytest-cov: pytest-cov
+  pytest-faulthandler: pytest-faulthandler
   ruamel.yaml: ruamel.yaml
   uvloop: uvloop
   youtube-dl: youtube-dl

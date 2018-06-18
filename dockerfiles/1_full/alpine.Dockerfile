@@ -18,7 +18,7 @@ RUN \
     # wand
     imagemagick6-dev && \
     # install minor deps
-    pip install -U asyncpg coverage flake8 lxml git+https://github.com/numpy/numpy@maintenance/1.14.x#egg=numpy Pillow psutil pycryptodome pytest-cov ruamel.yaml uvloop youtube-dl -q --retries 30 && \
+    pip install -U asyncpg coverage flake8 lxml git+https://github.com/numpy/numpy@maintenance/1.14.x#egg=numpy Pillow psutil pycryptodome pytest-cov pytest-faulthandler ruamel.yaml uvloop youtube-dl -q --retries 30 && \
     pip install -U matplotlib -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
