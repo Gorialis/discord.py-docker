@@ -6,17 +6,18 @@ discord.py-docker test script
 this script is used to determine if a container has built correctly or not
 """
 
-import sys
 from pip._internal.operations.freeze import freeze
 
-installed_pkgs = [x.split('==')[0].lower() for x in freeze()]
+INSTALLED_PKGS = [x.split('==')[0].lower() for x in freeze()]
 
-if 'uvloop' in installed_pkgs:
+
+if 'uvloop' in INSTALLED_PKGS:
     def test_has_uvloop():
         import asyncio
         import uvloop
 
         asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
 
 def test_has_discord():
     import discord
@@ -30,6 +31,7 @@ def test_has_discord():
     assert hasattr(bot, 'on_message')
     bot.loop.run_until_complete(bot.close())
 
+
 def test_has_voice():
     from discord.voice_client import has_nacl
     from discord.opus import is_loaded
@@ -37,7 +39,8 @@ def test_has_voice():
     assert has_nacl
     assert is_loaded()
 
-if 'numpy' in installed_pkgs:
+
+if 'numpy' in INSTALLED_PKGS:
     def test_has_numpy():
         import numpy as np
 
@@ -51,7 +54,8 @@ if 'numpy' in installed_pkgs:
                          170, 194, 218, 242, 266,
                          185, 212, 239, 266, 293])
 
-if 'scipy' in installed_pkgs:
+
+if 'scipy' in INSTALLED_PKGS:
     def test_has_scipy():
         from scipy import integrate
 
@@ -68,13 +72,21 @@ if 'scipy' in installed_pkgs:
         # check within bounds
         assert (answer + error) >= 29 and (answer - error) <= 29
 
-if 'pyyaml' in installed_pkgs:
+
+if 'pyyaml' in INSTALLED_PKGS:
     def test_has_pyyaml():
+        from inspect import cleandoc
         from random import randint
 
         from yaml import safe_load, dump
 
-        data = safe_load('- 123\n- "quoted text"\n- unquoted text\n- sample: |\n    some text right here')
+        data = safe_load(cleandoc('''
+        - 123
+        - "quoted text"
+        - unquoted text
+        - sample: |
+            some text right here
+        '''))
 
         assert data[0] == 123
         assert data[1] == 'quoted text'
@@ -85,15 +97,23 @@ if 'pyyaml' in installed_pkgs:
         random_data = [randint(0, 1000) for x in range(200)]
         assert safe_load(dump(random_data)) == random_data
 
-if 'ruamel.yaml' in installed_pkgs:
+
+if 'ruamel.yaml' in INSTALLED_PKGS:
     def test_has_ruamel():
+        from inspect import cleandoc
         from random import randint
         from io import StringIO
 
         from ruamel.yaml import YAML
 
         yaml = YAML(typ='safe')
-        data = yaml.load('- 123\n- "quoted text"\n- unquoted text\n- sample: |\n    some text right here')
+        data = yaml.load(cleandoc('''
+        - 123
+        - "quoted text"
+        - unquoted text
+        - sample: |
+            some text right here
+        '''))
 
         assert data[0] == 123
         assert data[1] == 'quoted text'
@@ -108,7 +128,8 @@ if 'ruamel.yaml' in installed_pkgs:
         buff.seek(0)
         assert yaml.load(buff) == random_data
 
-if 'fuzzywuzzy' in installed_pkgs:
+
+if 'fuzzywuzzy' in INSTALLED_PKGS:
     def test_has_fuzzywuzzy():
         from fuzzywuzzy import fuzz, process
 
@@ -117,7 +138,8 @@ if 'fuzzywuzzy' in installed_pkgs:
         assert guess == 'alpha'
         assert confidence < 50
 
-if 'pycryptodome' in installed_pkgs:
+
+if 'pycryptodome' in INSTALLED_PKGS:
     def test_has_pycryptodome():
         from Crypto import Random
         rndfile = Random.new()
@@ -151,7 +173,8 @@ if 'pycryptodome' in installed_pkgs:
         assert {{ cipher_type|lower }}_text == {{ cipher_type|lower }}_return
         {%- endfor %}
 
-if 'matplotlib' in installed_pkgs:
+
+if 'matplotlib' in INSTALLED_PKGS:
     def test_has_matplotlib():
         import matplotlib
         matplotlib.use('Agg')
@@ -268,7 +291,8 @@ if 'matplotlib' in installed_pkgs:
         with open('_test_plot_image.png', 'wb') as op:
             op.write(b'\x89PNG' + out_buffer.read())
 
-if 'pillow' in installed_pkgs:
+
+if 'pillow' in INSTALLED_PKGS:
     def test_has_pillow():
         import colorsys
         import itertools
@@ -298,7 +322,8 @@ if 'pillow' in installed_pkgs:
             # write transparent PNG file
             im2.save('_test_pillow_2.png', 'png')
 
-if 'lxml' in installed_pkgs:
+
+if 'lxml' in INSTALLED_PKGS:
     def test_lxml():
         from lxml import etree
 
@@ -313,18 +338,19 @@ if 'lxml' in installed_pkgs:
 
         assert etree.tostring(tree) == b'<root><a/><b/><c><d><e>test</e></d></c></root>'
 
-if 'beautifulsoup4' in installed_pkgs:
+
+if 'beautifulsoup4' in INSTALLED_PKGS:
     def test_bs4():
         from bs4 import BeautifulSoup
         soup = BeautifulSoup('<html><head><title>test title</title></head>\n<body><b>test</b> text</body></html>', 'html.parser')
         assert soup.title.string == 'test title'
         assert soup.get_text() == 'test title\ntest text'
 
-if 'wand' in installed_pkgs:
-    def test_wand():
-        import wand
 
+if 'wand' in INSTALLED_PKGS:
+    def test_wand():
         from wand.color import Color
+        from wand.drawing import Drawing
         from wand.image import Image
 
         with Image(width=500, height=500) as outer:
@@ -334,10 +360,27 @@ if 'wand' in installed_pkgs:
             with outer.convert('png') as converted:
                 converted.save(filename='_test_wand.png')
 
-{% for db in ['aiomysql', 'aioredis', 'asyncpg'] -%}
-if '{{ db }}' in installed_pkgs:
+        with Drawing() as draw:
+            draw.stroke_color = Color('black')
+            draw.stroke_width = 2
+            draw.fill_color = Color('white')
+            draw.arc(
+                (25, 25),
+                (75, 75),
+                (135, -45)
+            )
+
+            with Image(width=100, height=100, background=Color('lightblue')) as im:
+                draw.draw(im)
+                with im.convert('png') as converted:
+                    converted.save(filename='_test_wand_2.png')
+
+{%- for db in ['aiomysql', 'aioredis', 'asyncpg'] %}
+
+
+if '{{ db }}' in INSTALLED_PKGS:
     def test_db_{{ db }}_shallow():
         import {{ db }}
         assert {{ db }}.__version__
 
-{% endfor -%}
+{%- endfor %}{{ '\n' }}

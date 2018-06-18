@@ -8,9 +8,9 @@ ENV LD_LIBRARY_PATH /usr/local/lib:/usr/lib
 # echo development repo into syncable packages
 RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 
-RUN apk update && \
+RUN \
     # basic deps
-    apk add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers xz \
+    apk --no-cache add -q git mercurial openssl openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers xz \
     # voice support
     libffi-dev libsodium-dev opus-dev && \
     # update pip, install Cython & pytest
