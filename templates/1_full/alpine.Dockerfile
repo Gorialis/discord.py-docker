@@ -15,7 +15,6 @@ RUN \
     imagemagick6-dev && \
     # install minor deps
     pip install -U {{ minor_deps.values()|join(' ') }} -q --retries 30 && \
-    pip install -U matplotlib -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \
