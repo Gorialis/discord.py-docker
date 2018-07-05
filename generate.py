@@ -30,6 +30,10 @@ from jinja2 import Environment, FileSystemLoader
 from os import makedirs, path, walk
 from ruamel.yaml import YAML
 
+import re
+
+VERSION_REGEX = re.compile(r"(\d+)\.(\d+)\.(\d+)(?:(?:a|b|rc)(\d+))?")
+
 yaml = YAML(typ='safe')
 
 with open('config.yml', 'rb') as fp:
@@ -46,7 +50,8 @@ def get_variations():
     stages = config['stage_types']
 
     for version, distro, checkout, stage in product(py_v.items(), distros.items(), checkouts.items(), stages.items()):
-        if checkout[0] == 'async' and any([rc_stage in version[0] for rc_stage in ['a', 'b', 'rc']]):
+        version_data = tuple(map(int, filter(None, VERSION_REGEX.findall(version[0])[0])))
+        if checkout[0] == 'async' and version_data >= (3, 7):
             continue
         
         yield version, distro, checkout, stage
