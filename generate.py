@@ -73,7 +73,8 @@ extension_funcs = {
     'variations': list(get_variations()),
     'get_tags': lambda *x: get_tags(x),
     'get_tags_l': get_tags,
-    'tags': list(map(get_tags, get_variations()))
+    'tags': list(map(get_tags, get_variations())),
+    'enquote': lambda x: f'"{x}"'
 }
 
 env.filters.update(**extension_funcs)

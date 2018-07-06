@@ -4,7 +4,7 @@ ARG DISTRO
 FROM discord.py:build1-$PYTHON_VERSION-$DISTRO
 
 # install major deps
-RUN pip install -U {{ major_deps.values()|join(' ') }} -q --retries 30 && \
+RUN pip install -U {{ major_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \

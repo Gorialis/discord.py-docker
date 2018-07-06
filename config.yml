@@ -52,6 +52,7 @@ major_deps:
   parsedatetime: parsedatetime
   python-dateutil: python-dateutil
 # PyYAML: PyYAML
+  PyMySQL: PyMySQL>=0.7.5,<0.9
   sqlalchemy: sqlalchemy
   tabulate: tabulate
   tox: tox
