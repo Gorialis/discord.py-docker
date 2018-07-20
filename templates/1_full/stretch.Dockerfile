@@ -10,9 +10,11 @@ RUN apt-get update && \
     # cairosvg
     libcairo2-dev \
     # Pillow
-    libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev liblcms2-dev libtiff5-dev tk8.6-dev tcl8.6-dev libwebp-dev libharfbuzz-dev libfribidi-dev \
+    libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev liblcms2-dev libtiff5-dev tk8.6-dev tcl8.6-dev libwebp-dev libharfbuzz-dev libfribidi-dev libgif-dev \
     # wand
     imagemagick \
+    # debugging
+    gdb \
     # apt is so noisy
     > /dev/null && \
     # install minor deps

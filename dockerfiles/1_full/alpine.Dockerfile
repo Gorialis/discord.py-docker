@@ -14,9 +14,11 @@ RUN \
     # cairosvg
     cairo-dev \
     # Pillow
-    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev \
+    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev giflib-dev \
     # wand
-    imagemagick6-dev && \
+    imagemagick6-dev \
+    # debugging
+    gdb && \
     # install minor deps
     pip install -U "asyncpg" "coverage" "flake8" "lxml" "matplotlib" "numpy" "Pillow" "psutil" "pycryptodome" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" "youtube-dl" -q --retries 30 && \
     # remove caches

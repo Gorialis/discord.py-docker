@@ -10,9 +10,11 @@ RUN \
     # cairosvg
     cairo-dev \
     # Pillow
-    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev \
+    jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev giflib-dev \
     # wand
-    imagemagick6-dev && \
+    imagemagick6-dev \
+    # debugging
+    gdb && \
     # install minor deps
     pip install -U {{ minor_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches
