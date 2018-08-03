@@ -23,3 +23,7 @@ build:
     - cd dockerfiles
     - find ./ -name "*.sh" -exec chmod +x {} \;
     - bash -c "GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`" ./deploy_all.sh"
+  artifacts:
+    paths:
+      - dockerfiles/README.md
+    expire_in: 2 weeks

@@ -9,7 +9,7 @@ FROM python:$PYTHON_VERSION-slim-stretch
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2018-07-22 23:23:29 UTC"
+LABEL creation_time="2018-08-03 13:43:06 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
