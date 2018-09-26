@@ -10,6 +10,8 @@ from pip._internal.operations.freeze import freeze
 
 INSTALLED_PKGS = [x.split('==')[0].lower() for x in freeze()]
 
+print('Installed:', INSTALLED_PKGS)
+
 
 if 'uvloop' in INSTALLED_PKGS:
     def test_has_uvloop():
@@ -27,6 +29,7 @@ def test_has_discord():
     client.loop.run_until_complete(client.close())
 
     from discord.ext import commands
+
     bot = commands.Bot('?')
     assert hasattr(bot, 'on_message')
     bot.loop.run_until_complete(bot.close())
