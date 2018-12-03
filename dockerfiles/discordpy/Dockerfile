@@ -16,8 +16,6 @@ WORKDIR /tmp/tests
 COPY tests.py /tmp/tests/runtest.py
 
 RUN test $CHECKOUT && \
-    # install indev websockets [FIXME]
-    pip install -U git+https://github.com/aaugustin/websockets@master#egg=websockets -q --retries 30 && \
     # install d.py
     pip install -U git+https://github.com/Rapptz/discord.py@$CHECKOUT#egg=discord.py[voice,docs] -q --retries 30 && \
     # delete the cache in prep for tests
