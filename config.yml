@@ -17,8 +17,7 @@ distros:
   alpine: ["alpine"]
 
 checkouts:
-  rewrite: ["1.0", "rewrite"]
-  async: ["0.16", "async", ""]
+  rewrite: ["1.0", "rewrite", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:

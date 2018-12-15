@@ -22,7 +22,7 @@ RUN apt-get update && \
     # apt is so noisy
     > /dev/null && \
     # install minor deps
-    pip install -U "asyncpg" "coverage" "flake8" "lxml" "matplotlib" "numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" "youtube-dl" -q --retries 30 && \
+    pip install -U "asyncpg" "coverage" "flake8" "jishaku" "lxml" "matplotlib" "numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" "youtube-dl" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/lib/apt/lists/* && \
