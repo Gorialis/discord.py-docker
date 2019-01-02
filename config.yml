@@ -6,8 +6,8 @@
 # this is used to automatically generate the Dockerfiles, metadata and readme.
 
 python_versions:
-  3.7.1: ["3.7.1", "3.7"]
-  3.6.7: ["3.6.7", "3.6", ""]
+  3.7.2: ["3.7.2", "3.7"]
+  3.6.8: ["3.6.8", "3.6", ""]
   #3.5.5: ["3.5.5", "3.5"] # dropped because no stretch image and libc has some issues
   #3.4.8: ["3.4.8", "3.4"] # dropped because not compatible with a lot of async drivers
 
