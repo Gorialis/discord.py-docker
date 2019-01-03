@@ -26,7 +26,7 @@ minor_deps:
   flake8: flake8
   lxml: lxml
   matplotlib: matplotlib
-  #numpy: numpy
+  numpy: git+https://github.com/numpy/numpy@master#egg=numpy
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
