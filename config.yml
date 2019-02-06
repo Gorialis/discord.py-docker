@@ -18,6 +18,7 @@ distros:
 
 checkouts:
   rewrite: ["1.0", "rewrite", ""]
+  async: ["0.16", "async"]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
