@@ -1,5 +1,9 @@
 {% include 'WARNING_MD' %}
 
+## Notice
+
+As of 2019-02-06, containers for the `async` branch will no longer be built, and as such, these will no longer have up to date Python versions, dependencies or installations of `discord.py`. You may still [pull these images](https://github.com/Gorialis/discord.py-docker/blob/8e3bec119beac363b11bda1565938870ba17e3f0/dockerfiles/README.md) for legacy reasons, but it is recommended that bots on the old branch are updated to use `rewrite` instead.
+
 ## Tags and respective `Dockerfile` links
 
 {% for version, distro, checkout, stage in variations -%}
@@ -36,7 +40,7 @@ This image is therefore the largest image and is only recommended if you use a l
 ### Create a Dockerfile for your project
 
 ```dockerfile
-FROM gorialis/discord.py:rewrite
+FROM gorialis/discord.py
 
 WORKDIR /app
 
@@ -48,10 +52,10 @@ COPY . .
 CMD ["python", "bot.py"]
 ```
 
-You can use other tags if you need specific versions:
+You can use tags if you need specific versions:
 
 ```dockerfile
-FROM gorialis/discord.py:3.6-alpine-0.16
+FROM gorialis/discord.py:3.6-alpine
 
 WORKDIR /app
 
