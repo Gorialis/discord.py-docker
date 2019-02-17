@@ -17,7 +17,7 @@ This image comes in few variants depending on your use case:
 
 ### `discord.py:minimal`
 
-This is the base, and therefore smallest, image. It contains only `discord.py` with voice and docs support.
+This is the base, and therefore smallest, image. It contains only `discord.py` with voice and docs support, including ffmpeg and youtube-dl.
 
 ### `discord.py:full`
 

@@ -35,7 +35,6 @@ minor_deps:
   pytest-faulthandler: pytest-faulthandler
   ruamel.yaml: ruamel.yaml
   uvloop: uvloop
-  youtube-dl: youtube-dl
 
 major_deps:
   aiomysql: aiomysql

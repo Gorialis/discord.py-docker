@@ -9,7 +9,7 @@ FROM python:$PYTHON_VERSION-alpine
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2019-02-06 21:49:43 UTC"
+LABEL creation_time="2019-02-17 13:50:14 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -20,11 +20,11 @@ RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 RUN \
     # basic deps
-    apk --no-cache add -q git mercurial openssl openssl-dev openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers xz \
+    apk --no-cache add -q git mercurial cloc openssl openssl-dev openssh alpine-sdk bash gettext sudo build-base gnupg linux-headers xz \
     # voice support
-    libffi-dev libsodium-dev opus-dev && \
-    # update pip, install Cython & pytest
-    pip install -U pip Cython pytest -q --retries 30 && \
+    libffi-dev libsodium-dev opus-dev ffmpeg && \
+    # update pip, install Cython, pytest, youtube-dl
+    pip install -U pip Cython pytest youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \

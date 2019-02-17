@@ -9,19 +9,19 @@ FROM python:$PYTHON_VERSION-slim-stretch
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2019-02-06 21:49:43 UTC"
+LABEL creation_time="2019-02-17 13:50:14 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
 RUN apt-get update && \
     # basic deps
-    apt-get install -y -qq git openssl ssh gettext sudo build-essential \
+    apt-get install -y -qq git mercurial cloc openssl ssh gettext sudo build-essential \
     # voice support
-    libffi-dev libsodium-dev libopus-dev \
+    libffi-dev libsodium-dev libopus-dev ffmpeg \
     # apt is so noisy
     > /dev/null && \
-    # update pip, install Cython & pytest
-    pip install -U pip Cython pytest -q --retries 30 && \
+    # update pip, install Cython, pytest, youtube-dl
+    pip install -U pip Cython pytest youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/lib/apt/lists/* && \
