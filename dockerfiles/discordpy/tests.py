@@ -26,13 +26,11 @@ def test_has_discord():
     assert discord.__version__
 
     client = discord.Client()
-    client.loop.run_until_complete(client.close())
 
     from discord.ext import commands
 
     bot = commands.Bot('?')
     assert hasattr(bot, 'on_message')
-    bot.loop.run_until_complete(bot.close())
 
 
 def test_has_voice():
