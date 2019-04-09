@@ -18,7 +18,8 @@ distros:
   alpine: ["alpine"]
 
 checkouts:
-  rewrite: ["1.0", "rewrite", ""]
+  master: ["master", "dev"]
+  "": ["pypi", "1.0", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:

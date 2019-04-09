@@ -17,7 +17,7 @@ COPY tests.py /tmp/tests/runtest.py
 
 RUN test $CHECKOUT && \
     # install d.py
-    pip install -U git+https://github.com/Rapptz/discord.py@$CHECKOUT#egg=discord.py[voice,docs] -q --retries 30 && \
+    pip install -U ${CHECKOUT:+"git+https://github.com/Rapptz/discord.py@"}${CHECKOUT:-"discord.py"}${CHECKOUT:+"#egg=discord.py[voice,docs]"} -q --retries 30 && \
     # delete the cache in prep for tests
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \

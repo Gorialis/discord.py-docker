@@ -2,7 +2,7 @@
 
 ## Notice
 
-As of 2019-02-06, containers for the `async` branch will no longer be built, and as such, these will no longer have up to date Python versions, dependencies or installations of `discord.py`. You may still [pull these images](https://github.com/Gorialis/discord.py-docker/blob/8e3bec119beac363b11bda1565938870ba17e3f0/dockerfiles/README.md) for legacy reasons, but it is recommended that bots on the old branch are updated to use `rewrite` instead.
+The `rewrite` branch was merged into `master` on 2019-04-09, marking the end of the rewrite alpha stage. The `rewrite` tags will remain faithful to the old, now frozen, feature branch, so it is recommended to switch your containers to `master` to continue receiving development updates, or to switch to the new `pypi` tag.
 
 ## Tags and respective `Dockerfile` links
 
