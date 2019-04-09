@@ -1,7 +1,9 @@
 {% include 'WARNING' %}
+ARG DOCKER_REPO
 ARG PYTHON_VERSION
 ARG DISTRO
-FROM discord.py:build1-$PYTHON_VERSION-$DISTRO
+
+FROM $DOCKER_REPO/discord.py:build1-$PYTHON_VERSION-$DISTRO
 
 # install major deps
 RUN pip install -U {{ major_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \

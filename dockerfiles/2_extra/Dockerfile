@@ -3,9 +3,11 @@
 # DIRECT EDITS WILL BE DESTROYED WHEN THIS FILE IS NEXT GENERATED
 # PLEASE EDIT THE TEMPLATES INSTEAD OF THIS FILE
 #
+ARG DOCKER_REPO
 ARG PYTHON_VERSION
 ARG DISTRO
-FROM discord.py:build1-$PYTHON_VERSION-$DISTRO
+
+FROM $DOCKER_REPO/discord.py:build1-$PYTHON_VERSION-$DISTRO
 
 # install major deps
 RUN pip install -U "aiomysql" "aioredis" "beautifulsoup4" "cairosvg" "click" "colorlog" "colorthief" "fuzzywuzzy[speedup]" "humanize" "lru-dict" "objgraph" "parsedatetime" "python-dateutil" "PyYAML" "sqlalchemy" "tabulate" "tox" "twine" "uvloop" "wand" -q --retries 30 && \

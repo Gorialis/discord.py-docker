@@ -1,5 +1,6 @@
 {% include 'WARNING' %}
 ARG PYTHON_VERSION
+
 FROM python:$PYTHON_VERSION-stretch
 {% include 'LABEL' %}
 

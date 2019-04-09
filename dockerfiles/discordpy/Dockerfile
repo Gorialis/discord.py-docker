@@ -3,11 +3,12 @@
 # DIRECT EDITS WILL BE DESTROYED WHEN THIS FILE IS NEXT GENERATED
 # PLEASE EDIT THE TEMPLATES INSTEAD OF THIS FILE
 #
+ARG DOCKER_REPO
 ARG PYTHON_VERSION
 ARG DISTRO
 ARG BUILD_STAGE
 
-FROM discord.py:build$BUILD_STAGE-$PYTHON_VERSION-$DISTRO
+FROM $DOCKER_REPO/discord.py:build$BUILD_STAGE-$PYTHON_VERSION-$DISTRO
 
 ARG CHECKOUT
 
@@ -15,9 +16,10 @@ WORKDIR /tmp/tests
 
 COPY tests.py /tmp/tests/runtest.py
 
-RUN test $CHECKOUT && \
+RUN INSTALL_TARGET="${CHECKOUT:+"git+https://github.com/Rapptz/discord.py@"}${CHECKOUT:-"discord.py"}${CHECKOUT:+"#egg=discord.py[voice,docs]"}" && \
+    echo "Install target: ${INSTALL_TARGET}" && \
     # install d.py
-    pip install -U ${CHECKOUT:+"git+https://github.com/Rapptz/discord.py@"}${CHECKOUT:-"discord.py"}${CHECKOUT:+"#egg=discord.py[voice,docs]"} -q --retries 30 && \
+    pip install -U  -q --retries 30 && \
     # delete the cache in prep for tests
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \

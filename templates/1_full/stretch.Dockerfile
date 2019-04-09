@@ -1,6 +1,8 @@
 {% include 'WARNING' %}
+ARG DOCKER_REPO
 ARG PYTHON_VERSION
-FROM discord.py:build0-$PYTHON_VERSION-stretch
+
+FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-stretch
 
 RUN apt-get update && \
     # uvloop
