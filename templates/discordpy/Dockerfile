@@ -15,7 +15,7 @@ COPY tests.py /tmp/tests/runtest.py
 RUN INSTALL_TARGET="${CHECKOUT:+"git+https://github.com/Rapptz/discord.py@"}${CHECKOUT:-"discord.py"}${CHECKOUT:+"#egg=discord.py[voice,docs]"}" && \
     echo "Install target: ${INSTALL_TARGET}" && \
     # install d.py
-    pip install -U  -q --retries 30 && \
+    pip install -U "${INSTALL_TARGET}" -q --retries 30 && \
     # delete the cache in prep for tests
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \
