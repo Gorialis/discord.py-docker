@@ -15,7 +15,6 @@ stages:
   - full
   - extras
   - discord
-  - teardown
 
 do_setup:
   stage: setup
@@ -85,19 +84,7 @@ deploy_final:
     - cd dockerfiles
     - bash -c "GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`" ./deploy_target.sh discordpy"
     - cd ..
-  artifacts:
-    paths:
-      - dockerfiles
-    expire_in: 4 weeks
-  dependencies:
-    - do_setup
-    - deploy_minimal
-    - deploy_full
-    - deploy_extras
-
-do_teardown:
-  stage: teardown
-  script:
+  after_script:
     - docker system prune -af --volumes > /dev/null
   artifacts:
     paths:
@@ -108,4 +95,3 @@ do_teardown:
     - deploy_minimal
     - deploy_full
     - deploy_extras
-    - deploy_final
