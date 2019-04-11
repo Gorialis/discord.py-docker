@@ -50,6 +50,20 @@ def get_variations():
 
     yield from product(py_v.items(), distros.items(), checkouts.items(), stages.items())
 
+def simplify_config_dict(d):
+    return {
+        k: [v[0], ""] if "" in v and v[0] != "" else [v[0]]
+        for k, v in d.items()
+    }
+
+def get_variations_short():
+    py_v = simplify_config_dict(config['python_versions'])
+    distros = simplify_config_dict(config['distros'])
+    checkouts = simplify_config_dict(config['checkouts'])
+    stages = simplify_config_dict(config['stage_types'])
+
+    yield from product(py_v.items(), distros.items(), checkouts.items(), stages.items())
+
 def get_tags(args):
     py_v, distro, checkout, stage = args
     return list(product(py_v[1], distro[1], checkout[1], stage[1]))
@@ -65,6 +79,8 @@ extension_funcs = {
     'len': len,
     'get_variations': get_variations,
     'variations': list(get_variations()),
+    'get_variations_short': get_variations_short,
+    'variations_short': list(get_variations_short()),
     'get_tags': lambda *x: get_tags(x),
     'get_tags_l': get_tags,
     'tags': list(map(get_tags, get_variations())),
@@ -82,5 +98,5 @@ for root, dirs, files in walk('templates'):
     for name in files:
         real_name = path.join(root, name)[10:].replace('\\', '/')
         template = env.get_template(real_name)
-        with open(f'dockerfiles/{real_name}', 'w', encoding='utf8') as fp:
+        with open(f'dockerfiles/{real_name}', 'w', encoding='utf8', newline='\n') as fp:
             fp.write(template.render(now=now, **config))
