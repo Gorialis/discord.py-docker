@@ -15,6 +15,7 @@ RUN apt-get update && \
     pip install -U pip Cython pytest youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     find /usr/local -depth \
         \( \

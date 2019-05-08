@@ -27,6 +27,7 @@ RUN apt-get update && \
     pip install -U "asyncpg" "coverage" "flake8" "lxml" "matplotlib" "git+https://github.com/numpy/numpy@master#egg=numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     find /usr/local -depth \
         \( \
