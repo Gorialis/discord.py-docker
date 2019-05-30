@@ -6,7 +6,7 @@ FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-alpine
 
 RUN \
     # uvloop
-    apk --no-cache add -q libuv-dev \
+    apk --no-cache --allow-untrusted add -q libuv-dev \
     # lxml
     libxml2-dev libxslt-dev \
     # cairosvg
@@ -15,6 +15,8 @@ RUN \
     jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev giflib-dev \
     # wand
     imagemagick6-dev \
+    # h5py
+    hdf5-dev \
     # debugging
     gdb && \
     # install minor deps

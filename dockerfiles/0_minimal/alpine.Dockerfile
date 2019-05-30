@@ -10,14 +10,16 @@ FROM python:$PYTHON_VERSION-alpine
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2019-05-08 15:30:23 UTC"
+LABEL creation_time="2019-05-30 20:14:30 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
 ENV LD_LIBRARY_PATH /usr/local/lib:/usr/lib
 
-# echo development repo into syncable packages
-RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+# add extra apk repositories to allow more deps to be resolved in-house
+RUN \
+    echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+    echo "http://dl-8.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN \
     # basic deps

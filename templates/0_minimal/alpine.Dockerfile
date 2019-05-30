@@ -6,8 +6,10 @@ FROM python:$PYTHON_VERSION-alpine
 
 ENV LD_LIBRARY_PATH /usr/local/lib:/usr/lib
 
-# echo development repo into syncable packages
-RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+# add extra apk repositories to allow more deps to be resolved in-house
+RUN \
+    echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+    echo "http://dl-8.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN \
     # basic deps

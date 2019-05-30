@@ -10,7 +10,7 @@ FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-alpine
 
 RUN \
     # uvloop
-    apk --no-cache add -q libuv-dev \
+    apk --no-cache --allow-untrusted add -q libuv-dev \
     # lxml
     libxml2-dev libxslt-dev \
     # cairosvg
@@ -19,10 +19,12 @@ RUN \
     jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev giflib-dev \
     # wand
     imagemagick6-dev \
+    # h5py
+    hdf5-dev \
     # debugging
     gdb && \
     # install minor deps
-    pip install -U "asyncpg" "coverage" "flake8" "lxml" "matplotlib" "git+https://github.com/numpy/numpy@master#egg=numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" -q --retries 30 && \
+    pip install -U "asyncpg" "coverage" "flake8" "h5py" "lxml" "matplotlib" "git+https://github.com/numpy/numpy@master#egg=numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "pytest-faulthandler" "ruamel.yaml" "uvloop" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \

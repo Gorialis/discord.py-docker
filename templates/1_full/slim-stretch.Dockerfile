@@ -15,6 +15,8 @@ RUN apt-get update && \
     libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev liblcms2-dev libtiff5-dev tk8.6-dev tcl8.6-dev libwebp-dev libharfbuzz-dev libfribidi-dev libgif-dev \
     # wand
     imagemagick \
+    # h5py
+    libhdf5-dev \
     # debugging
     gdb \
     # apt is so noisy

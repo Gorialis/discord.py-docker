@@ -26,6 +26,7 @@ minor_deps:
   asyncpg: asyncpg
   coverage: coverage
   flake8: flake8
+  h5py: h5py
   lxml: lxml
   matplotlib: matplotlib
   numpy: git+https://github.com/numpy/numpy@master#egg=numpy
