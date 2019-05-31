@@ -17,6 +17,8 @@ RUN apt-get update && \
     imagemagick \
     # h5py
     libhdf5-dev \
+    # scipy
+    libssl-dev \
     # debugging
     gdb \
     # apt is so noisy
