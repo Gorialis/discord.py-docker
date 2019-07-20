@@ -1,8 +1,10 @@
 {% include 'WARNING_MD' %}
 
-## Notice
+## Most recent notice
 
-The `rewrite` branch was merged into `master` on 2019-04-09, marking the end of the rewrite alpha stage. The `rewrite` tags will remain faithful to the old, now frozen, feature branch, so it is recommended to switch your containers to `master` to continue receiving development updates, or to switch to the new `pypi` tag.
+The Docker `python` repo no longer builds containers for Debian stretch on 3.8+. In order to keep builds consistent, `stretch` containers will no longer be built, in favor of the newer `buster` containers available for all versions. This applies for slim images too (`slim-stretch` -> `slim-buster`). Alpine images are unaffected.
+
+*See all notices in the [full README](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/README.md)*
 
 ## Tags and respective `Dockerfile` links
 
