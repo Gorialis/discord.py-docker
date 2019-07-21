@@ -2,7 +2,7 @@
 ARG DOCKER_REPO
 ARG PYTHON_VERSION
 
-FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-slim-stretch
+FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-slim-buster
 
 RUN apt-get update && \
     # uvloop

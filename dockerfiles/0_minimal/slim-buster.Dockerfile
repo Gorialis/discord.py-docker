@@ -5,12 +5,12 @@
 #
 ARG PYTHON_VERSION
 
-FROM python:$PYTHON_VERSION-slim-stretch
+FROM python:$PYTHON_VERSION-slim-buster
 
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2019-07-20 23:48:32 UTC"
+LABEL creation_time="2019-07-21 03:25:41 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 

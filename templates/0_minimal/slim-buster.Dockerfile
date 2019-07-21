@@ -1,7 +1,7 @@
 {% include 'WARNING' %}
 ARG PYTHON_VERSION
 
-FROM python:$PYTHON_VERSION-slim-stretch
+FROM python:$PYTHON_VERSION-slim-buster
 {% include 'LABEL' %}
 
 RUN apt-get update && \
