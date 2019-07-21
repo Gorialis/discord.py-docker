@@ -28,13 +28,13 @@ minor_deps:
   flake8: flake8
   lxml: lxml
   matplotlib: matplotlib
-  numpy: numpy
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
   pylint: pylint
   pytest-cov: pytest-cov
   ruamel.yaml: ruamel.yaml
+  toml: toml
   uvloop: uvloop
 
 major_deps:

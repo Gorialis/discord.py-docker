@@ -23,6 +23,8 @@ RUN apt-get update && \
     gdb \
     # apt is so noisy
     > /dev/null && \
+    # always install numpy separately
+    pip install -U numpy --retries 30 && \
     # install minor deps
     pip install -U {{ minor_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches

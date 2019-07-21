@@ -19,6 +19,8 @@ RUN \
     hdf5-dev \
     # debugging
     gdb && \
+    # always install numpy separately
+    pip install -U numpy --retries 30 && \
     # install minor deps
     pip install -U {{ minor_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches

@@ -27,8 +27,10 @@ RUN apt-get update && \
     gdb \
     # apt is so noisy
     > /dev/null && \
+    # always install numpy separately
+    pip install -U numpy --retries 30 && \
     # install minor deps
-    pip install -U "asyncpg" "coverage" "flake8" "h5py" "lxml" "matplotlib" "numpy" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "ruamel.yaml" "uvloop" -q --retries 30 && \
+    pip install -U "asyncpg" "click" "coverage" "flake8" "lxml" "matplotlib" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "ruamel.yaml" "toml" "uvloop" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \
