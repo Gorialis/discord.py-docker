@@ -23,9 +23,9 @@ checkouts:
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
   asyncpg: asyncpg
+  click: click
   coverage: coverage
   flake8: flake8
-  h5py: h5py
   lxml: lxml
   matplotlib: matplotlib
   numpy: numpy
@@ -42,10 +42,10 @@ major_deps:
   aioredis: aioredis
   beautifulsoup4: beautifulsoup4
   cairosvg: cairosvg
-  click: click
   colorlog: colorlog
   colorthief: colorthief
   fuzzywuzzy: fuzzywuzzy[speedup]
+  h5py: h5py
   humanize: humanize
   lru-dict: lru-dict
   objgraph: objgraph
