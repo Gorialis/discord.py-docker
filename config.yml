@@ -26,7 +26,7 @@ minor_deps:
   click: click
   coverage: coverage
   flake8: flake8
-  lxml: lxml
+  lxml: git+https://github.com/lxml/lxml@master#egg=lxml
   matplotlib: matplotlib
   Pillow: Pillow
   psutil: psutil
