@@ -49,7 +49,9 @@ def test_has_discord():
 
 def test_has_voice():
     from discord.voice_client import has_nacl
-    from discord.opus import is_loaded
+    from discord.opus import is_loaded, Encoder
+
+    Encoder()  # Ensure opus gets loaded
 
     assert has_nacl
     assert is_loaded()
