@@ -35,7 +35,6 @@ minor_deps:
   pytest-cov: pytest-cov
   ruamel.yaml: ruamel.yaml
   toml: toml
-  uvloop: uvloop
 
 major_deps:
   aiomysql: aiomysql

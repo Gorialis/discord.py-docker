@@ -88,7 +88,7 @@ This is the base, and therefore smallest, image. It contains only `discord.py` w
 This is the default image. This contains some precompiled common dependencies, and as such, is much larger than the base image.
 
 These dependencies are:
--   `asyncpg`, `click`, `coverage`, `flake8`, `lxml`, `matplotlib`, `Pillow`, `psutil`, `pycryptodome`, `pylint`, `pytest-cov`, `ruamel.yaml`, `toml`, `uvloop`
+-   `asyncpg`, `click`, `coverage`, `flake8`, `lxml`, `matplotlib`, `Pillow`, `psutil`, `pycryptodome`, `pylint`, `pytest-cov`, `ruamel.yaml`, `toml`
 
 This can help reduce bot installation time as packages that would otherwise take a long time to compile or acquire are already installed.
 
