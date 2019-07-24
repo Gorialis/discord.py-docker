@@ -95,7 +95,7 @@ This can help reduce bot installation time as packages that would otherwise take
 ### `discord.py:extras`
 
 This image extends the `full` image with more dependencies:
--   `aiomysql`, `aioredis`, `beautifulsoup4`, `cairosvg`, `colorlog`, `colorthief`, `fuzzywuzzy`, `h5py`, `humanize`, `lru-dict`, `objgraph`, `parsedatetime`, `python-dateutil`, `PyYAML`, `sqlalchemy`, `tabulate`, `tox`, `twine`, `uvloop`, `wand`
+-   `aiomysql`, `aioredis`, `beautifulsoup4`, `cairosvg`, `colorlog`, `colorthief`, `fuzzywuzzy`, `h5py`, `humanize`, `lru-dict`, `objgraph`, `parsedatetime`, `python-dateutil`, `PyYAML`, `sqlalchemy`, `tabulate`, `tox`, `twine`, `wand`
 
 This image is therefore the largest image and is only recommended if you use a large variety of these dependencies.
 

@@ -30,7 +30,7 @@ RUN apt-get update && \
     # always install numpy separately
     pip install -U numpy --retries 30 && \
     # install minor deps
-    pip install -U "asyncpg" "click" "coverage" "flake8" "lxml" "matplotlib" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "ruamel.yaml" "toml" "uvloop" -q --retries 30 && \
+    pip install -U "asyncpg" "click" "coverage" "flake8" "git+https://github.com/lxml/lxml@master#egg=lxml" "matplotlib" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "ruamel.yaml" "toml" "uvloop" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \

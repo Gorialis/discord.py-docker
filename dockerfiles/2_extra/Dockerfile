@@ -10,7 +10,7 @@ ARG DISTRO
 FROM $DOCKER_REPO/discord.py:build1-$PYTHON_VERSION-$DISTRO
 
 # install major deps
-RUN pip install -U "aiomysql" "aioredis" "beautifulsoup4" "cairosvg" "colorlog" "colorthief" "fuzzywuzzy[speedup]" "h5py" "humanize" "lru-dict" "objgraph" "parsedatetime" "python-dateutil" "PyYAML" "sqlalchemy" "tabulate" "tox" "twine" "uvloop" "wand" -q --retries 30 && \
+RUN pip install -U "aiomysql" "aioredis" "beautifulsoup4" "cairosvg" "colorlog" "colorthief" "fuzzywuzzy[speedup]" "h5py" "humanize" "lru-dict" "objgraph" "parsedatetime" "python-dateutil" "PyYAML" "sqlalchemy" "tabulate" "tox" "twine" "wand" -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     find /usr/local -depth \

@@ -56,7 +56,6 @@ major_deps:
   tabulate: tabulate
   tox: tox
   twine: twine
-  uvloop: uvloop
   wand: wand
 
 stage_types:
