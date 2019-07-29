@@ -33,7 +33,7 @@ minor_deps:
   pycryptodome: pycryptodome
   pylint: pylint
   pytest-cov: pytest-cov
-  ruamel.yaml: "ruamel.yaml<0.15"
+  ruamel.yaml: "ruamel.yaml<0.16"
   toml: toml
 
 major_deps:
