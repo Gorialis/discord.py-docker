@@ -12,7 +12,7 @@ RUN apt-get update && \
     # apt is so noisy
     > /dev/null && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip Cython pytest git+https://github.com/PyCQA/astroid youtube-dl -q --retries 30 && \
+    pip install -U pip Cython git+https://github.com/pytest-dev/pytest@master#egg=pytest git+https://github.com/PyCQA/astroid@master#egg=astroid youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \
