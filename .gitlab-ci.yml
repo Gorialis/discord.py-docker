@@ -4,6 +4,9 @@ image: docker:stable
 variables:
   DOCKER_DRIVER: overlay
 
+only:
+  - master@Gorialis/discord.py-docker
+
 before_script:
   - docker info
   - apk add --no-cache bash git
