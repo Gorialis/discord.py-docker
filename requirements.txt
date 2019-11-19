@@ -1,2 +1,2 @@
 jinja2
-ruamel.yaml<0.16
+ruamel.yaml
