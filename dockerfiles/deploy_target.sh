@@ -8,7 +8,7 @@ GIT_HEAD=${GIT_HEAD:-unknown+unknown}
 echo "deploying with git head ${GIT_HEAD}"
 
 cd $1;
-. ./deploy.sh;
+. ./deploy.sh $2;
 cd ..;
 
 export DOCKER_DISCORD_PY_FAILED="$(cat ${DOCKER_DISCORD_PY_FAILTMP})"
