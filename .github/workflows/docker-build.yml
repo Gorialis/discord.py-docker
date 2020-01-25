@@ -56,6 +56,8 @@ jobs:
       matrix:
         python-version: [3_6, 3_7, 3_8, 3_9]
     steps:
+      - uses: actions/checkout@v2
+
       - uses: actions/download-artifact@v1
         with:
           name: dockerfiles
@@ -66,6 +68,7 @@ jobs:
           export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
           echo "${{ secrets.DOCKER_LOGIN_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
           cd dockerfiles
+          find ./ -name "*.sh" -exec chmod +x {} \;
           ./deploy_target.sh 0_minimal ${PYTHON_${{ matrix.python-version }}_IMAGE}
           cd ..
 
@@ -82,6 +85,8 @@ jobs:
       matrix:
         python-version: [3_6, 3_7, 3_8, 3_9]
     steps:
+      - uses: actions/checkout@v2
+
       - uses: actions/download-artifact@v1
         with:
           name: dockerfiles
@@ -92,6 +97,7 @@ jobs:
           export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
           echo "${{ secrets.DOCKER_LOGIN_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
           cd dockerfiles
+          find ./ -name "*.sh" -exec chmod +x {} \;
           ./deploy_target.sh 1_full ${PYTHON_${{ matrix.python-version }}_IMAGE}
           cd ..
 
@@ -108,6 +114,8 @@ jobs:
       matrix:
         python-version: [3_6, 3_7, 3_8, 3_9]
     steps:
+      - uses: actions/checkout@v2
+
       - uses: actions/download-artifact@v1
         with:
           name: dockerfiles
@@ -118,6 +126,7 @@ jobs:
           export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
           echo "${{ secrets.DOCKER_LOGIN_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
           cd dockerfiles
+          find ./ -name "*.sh" -exec chmod +x {} \;
           ./deploy_target.sh 2_extra ${PYTHON_${{ matrix.python-version }}_IMAGE}
           cd ..
 
@@ -134,6 +143,8 @@ jobs:
       matrix:
         python-version: [3_6, 3_7, 3_8, 3_9]
     steps:
+      - uses: actions/checkout@v2
+
       - uses: actions/download-artifact@v1
         with:
           name: dockerfiles
@@ -144,6 +155,7 @@ jobs:
           export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
           echo "${{ secrets.DOCKER_LOGIN_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
           cd dockerfiles
+          find ./ -name "*.sh" -exec chmod +x {} \;
           ./deploy_target.sh discordpy ${PYTHON_${{ matrix.python-version }}_IMAGE}
           cd ..
 
