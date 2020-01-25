@@ -13,7 +13,7 @@ python_versions:
 
 distros:
   buster: ["buster", ""]
-  slim-buster: ["slim-buster", "slim"]
+#  slim-buster: ["slim-buster", "slim"]
   alpine: ["alpine"]
 
 checkouts:
