@@ -54,7 +54,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_6, 3_7, 3_8]
     steps:
       - uses: actions/checkout@v2
 
@@ -83,7 +83,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_6, 3_7, 3_8]
     steps:
       - uses: actions/checkout@v2
 
@@ -112,7 +112,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_6, 3_7, 3_8]
     steps:
       - uses: actions/checkout@v2
 
@@ -141,7 +141,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_6, 3_7, 3_8]
     steps:
       - uses: actions/checkout@v2
 
