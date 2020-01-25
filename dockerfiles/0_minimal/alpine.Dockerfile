@@ -10,7 +10,7 @@ FROM python:$PYTHON_VERSION-alpine
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2020-01-25 15:16:56 UTC"
+LABEL creation_time="2020-01-25 15:57:57 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -27,7 +27,7 @@ RUN \
     # voice support
     libffi-dev libsodium-dev opus-dev ffmpeg && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip Cython git+https://github.com/pytest-dev/pytest@master#egg=pytest git+https://github.com/PyCQA/astroid@master#egg=astroid youtube-dl -q --retries 30 && \
+    pip install -U pip git+https://github.com/cython/cython@master#egg=Cython git+https://github.com/pytest-dev/pytest@master#egg=pytest git+https://github.com/PyCQA/astroid@master#egg=astroid youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \
