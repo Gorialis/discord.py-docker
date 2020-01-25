@@ -64,31 +64,6 @@ jobs:
         shell: bash
         run: |
           export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
-          cd dockerfiles
-          ./deploy_target.sh 0_minimal ${PYTHON_${{ matrix.python-version }}_IMAGE}
-          cd ..
-
-      - uses: actions/upload-artifact@v1
-        with:
-          name: dockerfiles
-          path: dockerfiles
-
-  minimal:
-    runs-on: ubuntu-latest
-    needs: setup
-    strategy:
-      max-parallel: 8
-      matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
-    steps:
-      - uses: actions/download-artifact@v1
-        with:
-          name: dockerfiles
-
-      - name: Build minimal containers
-        shell: bash
-        run: |
-          export GIT_HEAD="`git rev-list --count HEAD || echo unknown`+`git rev-parse --short HEAD || echo unknown`"
           echo "${{ secrets.DOCKER_LOGIN_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_LOGIN_USERNAME }}" --password-stdin
           cd dockerfiles
           ./deploy_target.sh 0_minimal ${PYTHON_${{ matrix.python-version }}_IMAGE}
