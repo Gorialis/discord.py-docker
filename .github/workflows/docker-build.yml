@@ -1,6 +1,9 @@
 name: "Build Docker images"
 
-on: [push]
+on:
+  - push
+  - schedule:
+    - cron: "0 12 * * 0,2,4,6"
 
 env:
   PYTHON_3_6_IMAGE: "3.6.10"
