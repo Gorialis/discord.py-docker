@@ -1,8 +1,10 @@
 name: "Build Docker images"
 
 on:
-  - push
-  - schedule:
+  push:
+    branches:
+      - master
+  schedule:
     - cron: "0 12 * * 0,2,4,6"
 
 env:
