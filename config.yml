@@ -5,6 +5,7 @@
 # a blank tag means it is implicit when omitted
 # this is used to automatically generate the Dockerfiles, metadata and readme.
 
+# When updating this ALSO UPDATE .github/workflows/docker-build.yml !!
 python_versions:
 #  "3.9.0b5":  ["3.9.0b5", "3.9.0", "3.9", "rc"]
   "3.8.5":    ["3.8.5", "3.8", ""]
