@@ -6,10 +6,10 @@
 # this is used to automatically generate the Dockerfiles, metadata and readme.
 
 python_versions:
-#  "3.9.0a2":  ["3.9.0a2", "3.9.0", "3.9", "rc"]
-  "3.8.1":    ["3.8.1", "3.8", ""]
-  "3.7.6":    ["3.7.5", "3.7"]
-  "3.6.10":   ["3.6.10", "3.6"]
+#  "3.9.0b5":  ["3.9.0b5", "3.9.0", "3.9", "rc"]
+  "3.8.5":    ["3.8.5", "3.8", ""]
+  "3.7.8":    ["3.7.8", "3.7"]
+  "3.6.11":   ["3.6.11", "3.6"]
 
 distros:
   buster: ["buster", ""]
@@ -26,14 +26,14 @@ minor_deps:
   click: click
   coverage: coverage
   flake8: flake8
-  lxml: git+https://github.com/lxml/lxml@master#egg=lxml
+  lxml: "lxml @ git+https://github.com/lxml/lxml@master"
   matplotlib: matplotlib
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
   pylint: pylint
   pytest-cov: pytest-cov
-  ruamel.yaml: "ruamel.yaml<0.16"
+  ruamel.yaml: "ruamel.yaml"
   toml: toml
 
 major_deps:
@@ -44,7 +44,7 @@ major_deps:
   colorlog: colorlog
   colorthief: colorthief
   fuzzywuzzy: fuzzywuzzy[speedup]
-  h5py: h5py
+  h5py: "h5py @ git+https://github.com/h5py/h5py@master"
   humanize: humanize
   lru-dict: lru-dict
   objgraph: objgraph
