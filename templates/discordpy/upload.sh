@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+echo "Uploading stage 3 (discord.py | final)"
+
 {% for version, distro, checkout, stage in variations %}
 if [ $1 = "{{ version[0] }}" ];
 then

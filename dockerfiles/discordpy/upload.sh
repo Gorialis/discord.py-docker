@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+echo "Uploading stage 3 (discord.py | final)"
+
 
 if [ $1 = "3.8.5" ];
 then
