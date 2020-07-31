@@ -13,7 +13,7 @@ import pytest
 from pip._internal.operations.freeze import freeze
 
 INSTALLED_PKGS = {
-    x[0].lower(): x[1]
+    x[0].lower(): (x[1] if len(x) >= 2 else None)
     for x in (
         y.split('==') for y in freeze()
     )
