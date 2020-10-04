@@ -10,7 +10,7 @@ FROM python:$PYTHON_VERSION-buster
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2020-10-04 18:22:22 UTC"
+LABEL creation_time="2020-10-04 21:25:36 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -21,6 +21,8 @@ RUN apt-get update && \
     libffi-dev libsodium-dev libopus-dev ffmpeg \
     # apt is so noisy
     > /dev/null && \
+    # do this symlink for numpy
+    ln -s /usr/include/locale.h /usr/include/xlocale.h && \
     # update pip, install Cython, pytest, youtube-dl
     pip install -U pip "Cython @ git+https://github.com/cython/cython@master" "pytest @ git+https://github.com/pytest-dev/pytest@master" "astroid @ git+https://github.com/PyCQA/astroid@master" youtube-dl -q --retries 30 && \
     # remove caches
