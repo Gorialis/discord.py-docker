@@ -20,7 +20,7 @@ RUN \
     # debugging
     gdb && \
     # always install numpy separately
-    pip install -U git+https://github.com/numpy/numpy@master#egg=numpy --retries 30 && \
+    pip install -U numpy --retries 30 && \
     # install minor deps
     pip install -U {{ minor_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches

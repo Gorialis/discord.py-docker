@@ -26,7 +26,7 @@ RUN apt-get update && \
     # apt is so noisy
     > /dev/null && \
     # always install numpy separately
-    pip install -U git+https://github.com/numpy/numpy@master#egg=numpy --retries 30 && \
+    pip install -U numpy --retries 30 && \
     # install minor deps
     pip install -U "asyncpg" "click" "coverage" "flake8" "lxml @ git+https://github.com/lxml/lxml@master" "matplotlib" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "ruamel.yaml" "toml" -q --retries 30 && \
     # remove caches

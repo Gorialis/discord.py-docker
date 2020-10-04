@@ -17,7 +17,7 @@ RUN \
     # voice support
     libffi-dev libsodium-dev opus-dev ffmpeg && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip git+https://github.com/cython/cython@master#egg=Cython git+https://github.com/pytest-dev/pytest@master#egg=pytest git+https://github.com/PyCQA/astroid@master#egg=astroid youtube-dl -q --retries 30 && \
+    pip install -U pip "Cython @ git+https://github.com/cython/cython@master" "pytest @ git+https://github.com/pytest-dev/pytest@master" "astroid @ git+https://github.com/PyCQA/astroid@master" youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \

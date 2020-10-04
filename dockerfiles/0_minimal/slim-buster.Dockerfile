@@ -10,7 +10,7 @@ FROM python:$PYTHON_VERSION-slim-buster
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2020-08-19 18:10:00 UTC"
+LABEL creation_time="2020-10-04 18:22:22 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -22,7 +22,7 @@ RUN apt-get update && \
     # apt is so noisy
     > /dev/null && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip git+https://github.com/cython/cython@master#egg=Cython git+https://github.com/pytest-dev/pytest@master#egg=pytest git+https://github.com/PyCQA/astroid@master#egg=astroid youtube-dl -q --retries 30 && \
+    pip install -U pip "Cython @ git+https://github.com/cython/cython@master" "pytest @ git+https://github.com/pytest-dev/pytest@master" "astroid @ git+https://github.com/PyCQA/astroid@master" youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \
