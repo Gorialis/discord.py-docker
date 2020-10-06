@@ -19,7 +19,7 @@ distros:
 
 checkouts:
   master: ["master", "dev"]
-  "": ["pypi", "1.3", "1", ""]
+  "": ["pypi", "1.5", "1", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
