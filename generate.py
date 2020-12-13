@@ -28,15 +28,13 @@ from datetime import datetime
 from itertools import chain, product
 from jinja2 import Environment, FileSystemLoader
 from os import makedirs, path, walk
-from ruamel.yaml import YAML
+from yaml import safe_load
 
 import re
 
 
-yaml = YAML(typ='safe')
-
 with open('config.yml', 'rb') as fp:
-    config = yaml.load(fp)
+    config = safe_load(fp)
 
 env = Environment(loader=FileSystemLoader('templates'))
 
@@ -95,8 +93,10 @@ now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 for root, dirs, files in walk('templates'):
     for name in dirs:
         makedirs(f'dockerfiles/{path.join(root, name)[10:]}', exist_ok=True)
+    
     for name in files:
         real_name = path.join(root, name)[10:].replace('\\', '/')
         template = env.get_template(real_name)
+
         with open(f'dockerfiles/{real_name}', 'w', encoding='utf8', newline='\n') as fp:
             fp.write(template.render(now=now, **config))
