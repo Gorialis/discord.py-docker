@@ -3,7 +3,7 @@
 
 This is the repo that stores generated Dockerfiles for the [gorialis/discord.py](https://hub.docker.com/r/gorialis/discord.py/) Docker repository.
 
-You can generate Dockerfiles by using Python 3.6, installing `requirements.txt` with `pip install -U -r requirements.txt` and then simply running `generate.py`.
+You can generate Dockerfiles by using Python 3.9, installing `requirements.txt` with `pip install -U -r requirements.txt` and then simply running `generate.py`.
 
 Components of the Dockerfiles are stored in `templates/`. Generation configuration is stored in `config.yml`.
 

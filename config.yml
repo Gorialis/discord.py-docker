@@ -27,15 +27,17 @@ minor_deps:
   click: click
   coverage: coverage
   flake8: flake8
-  lxml: "lxml @ git+https://github.com/lxml/lxml@master"
+  lxml: lxml
   matplotlib: matplotlib
   Pillow: Pillow
   psutil: psutil
   pycryptodome: pycryptodome
   pylint: pylint
   pytest-cov: pytest-cov
+  PyYAML: PyYAML
   ruamel.yaml: "ruamel.yaml"
   toml: toml
+  twine: twine
 
 major_deps:
   aiomysql: aiomysql
@@ -45,17 +47,15 @@ major_deps:
   colorlog: colorlog
   colorthief: colorthief
   fuzzywuzzy: fuzzywuzzy[speedup]
-  h5py: "h5py @ git+https://github.com/h5py/h5py@master"
+  h5py: h5py
   humanize: humanize
   lru-dict: lru-dict
   objgraph: objgraph
   parsedatetime: parsedatetime
   python-dateutil: python-dateutil
-  PyYAML: PyYAML
   sqlalchemy: sqlalchemy
   tabulate: tabulate
   tox: tox
-  twine: twine
   wand: wand
 
 stage_types:

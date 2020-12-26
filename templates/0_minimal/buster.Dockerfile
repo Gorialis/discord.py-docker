@@ -14,7 +14,7 @@ RUN apt-get update && \
     # do this symlink for numpy
     ln -s /usr/include/locale.h /usr/include/xlocale.h && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip "Cython @ git+https://github.com/cython/cython@master" "pytest @ git+https://github.com/pytest-dev/pytest@master" "astroid @ git+https://github.com/PyCQA/astroid@master" youtube-dl -q --retries 30 && \
+    pip install -U pip Cython pytest youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \

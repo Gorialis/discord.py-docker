@@ -10,7 +10,7 @@ FROM python:$PYTHON_VERSION-alpine
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2020-12-24 06:38:32 UTC"
+LABEL creation_time="2020-12-26 13:04:52 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -29,7 +29,7 @@ RUN \
     # do this symlink for numpy
     ln -s /usr/include/locale.h /usr/include/xlocale.h && \
     # update pip, install Cython, pytest, youtube-dl
-    pip install -U pip "Cython @ git+https://github.com/cython/cython@master" "pytest @ git+https://github.com/pytest-dev/pytest@master" "astroid @ git+https://github.com/PyCQA/astroid@master" youtube-dl -q --retries 30 && \
+    pip install -U pip Cython pytest youtube-dl -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     rm -rf /var/cache/apk/* && \
