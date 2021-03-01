@@ -10,7 +10,7 @@ FROM python:$PYTHON_VERSION-slim-buster
 ARG BUILD_TIME=unknown
 ARG GIT_HEAD=unknown
 LABEL maintainer="Devon R <Gorialis>"
-LABEL creation_time="2021-03-01 17:36:09 UTC"
+LABEL creation_time="2021-03-01 18:00:49 UTC"
 LABEL build_time=$BUILD_TIME
 LABEL git_head=$GIT_HEAD
 
@@ -21,7 +21,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 
 RUN apt-get update && \
     # basic deps
-    apt-get install -y -qq git mercurial cloc openssl ssh gettext sudo build-essential \
+    apt-get install -y -qq git mercurial cloc openssl ssh gettext sudo build-essential wget \
     # voice support
     libffi-dev libsodium-dev libopus-dev ffmpeg \
     # apt is so noisy

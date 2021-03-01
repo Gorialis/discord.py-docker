@@ -11,7 +11,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 
 RUN apt-get update && \
     # basic deps
-    apt-get install -y -qq git mercurial cloc openssl ssh gettext sudo build-essential \
+    apt-get install -y -qq git mercurial cloc openssl ssh gettext sudo build-essential wget \
     # voice support
     libffi-dev libsodium-dev libopus-dev ffmpeg \
     # apt is so noisy
