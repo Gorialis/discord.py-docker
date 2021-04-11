@@ -8,17 +8,11 @@ on:
     - cron: "0 12 * * 0,2,4,6"
 
 env:
-  PYTHON_3_6_IMAGE: "3.6.13"
-  PYTHON_3_6_TAGS: "3.6.13 3.6"
+  PYTHON_3_8_IMAGE: "3.8.9"
+  PYTHON_3_8_TAGS: "3.8.9 3.8"
 
-  PYTHON_3_7_IMAGE: "3.7.10"
-  PYTHON_3_7_TAGS: "3.7.10 3.7"
-
-  PYTHON_3_8_IMAGE: "3.8.8"
-  PYTHON_3_8_TAGS: "3.8.8 3.8"
-
-  PYTHON_3_9_IMAGE: "3.9.2"
-  PYTHON_3_9_TAGS: "3.9.2 3.9 ."
+  PYTHON_3_9_IMAGE: "3.9.4"
+  PYTHON_3_9_TAGS: "3.9.4 3.9 ."
 
 jobs:
   setup:
@@ -26,10 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python 3.8
+      - name: Set up Python 3.9
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Ensure login succeeds for Docker Hub and GitHub registry
         shell: bash
@@ -59,7 +53,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_8, 3_9]
     steps:
       - uses: actions/checkout@v2
 
@@ -88,7 +82,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_8, 3_9]
     steps:
       - uses: actions/checkout@v2
 
@@ -117,7 +111,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_8, 3_9]
     steps:
       - uses: actions/checkout@v2
 
@@ -146,7 +140,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_6, 3_7, 3_8, 3_9]
+        python-version: [3_8, 3_9]
     steps:
       - uses: actions/checkout@v2
 
