@@ -8,11 +8,14 @@ on:
     - cron: "0 12 * * 0,2,4,6"
 
 env:
-  PYTHON_3_8_IMAGE: "3.8.9"
-  PYTHON_3_8_TAGS: "3.8.9 3.8"
+  PYTHON_3_8_IMAGE: "3.8.12"
+  PYTHON_3_8_TAGS: "3.8.12 3.8"
 
   PYTHON_3_9_IMAGE: "3.9.4"
   PYTHON_3_9_TAGS: "3.9.4 3.9 ."
+
+  PYTHON_3_10_IMAGE: "3.10.0rc2"
+  PYTHON_3_10_TAGS: "3.10.0rc2 3.10.0rc 3.10.0 3.10 rc"
 
 jobs:
   setup:
@@ -53,7 +56,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_8, 3_9]
+        python-version: [3_8, 3_9, 3_10]
     steps:
       - uses: actions/checkout@v2
 
@@ -82,7 +85,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_8, 3_9]
+        python-version: [3_8, 3_9, 3_10]
     steps:
       - uses: actions/checkout@v2
 
@@ -111,7 +114,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_8, 3_9]
+        python-version: [3_8, 3_9, 3_10]
     steps:
       - uses: actions/checkout@v2
 
@@ -140,7 +143,7 @@ jobs:
     strategy:
       max-parallel: 8
       matrix:
-        python-version: [3_8, 3_9]
+        python-version: [3_8, 3_9, 3_10]
     steps:
       - uses: actions/checkout@v2
 
