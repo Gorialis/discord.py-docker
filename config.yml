@@ -7,8 +7,8 @@
 
 # When updating this ALSO UPDATE .github/workflows/docker-build.yml !!
 python_versions:
-  "3.10.0rc2":  ["3.10.0rc2", "3.10.0rc", "3.10.0", "3.10", "rc"]
-  "3.9.7":      ["3.9.7", "3.9", ""]
+  "3.10.0":  ["3.10.0", "3.10", ""]
+  "3.9.7":      ["3.9.7", "3.9"]
   "3.8.12":     ["3.8.12", "3.8"]
 
 distros:

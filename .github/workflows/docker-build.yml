@@ -11,11 +11,11 @@ env:
   PYTHON_3_8_IMAGE: "3.8.12"
   PYTHON_3_8_TAGS: "3.8.12 3.8"
 
-  PYTHON_3_9_IMAGE: "3.9.4"
-  PYTHON_3_9_TAGS: "3.9.4 3.9 ."
+  PYTHON_3_9_IMAGE: "3.9.7"
+  PYTHON_3_9_TAGS: "3.9.7 3.9"
 
-  PYTHON_3_10_IMAGE: "3.10.0rc2"
-  PYTHON_3_10_TAGS: "3.10.0rc2 3.10.0rc 3.10.0 3.10 rc"
+  PYTHON_3_10_IMAGE: "3.10.0"
+  PYTHON_3_10_TAGS: "3.10.0 3.10 ."
 
 jobs:
   setup:
