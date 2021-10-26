@@ -46,7 +46,6 @@ major_deps:
   colorlog: colorlog
   colorthief: colorthief
   fuzzywuzzy: fuzzywuzzy[speedup]
-  h5py: h5py
   humanize: humanize
   lru-dict: lru-dict
   objgraph: objgraph
