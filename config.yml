@@ -7,9 +7,10 @@
 
 # When updating this ALSO UPDATE .github/workflows/docker-build.yml !!
 python_versions:
-  "3.10.0":  ["3.10.0", "3.10", ""]
-  "3.9.7":      ["3.9.7", "3.9"]
-  "3.8.12":     ["3.8.12", "3.8"]
+  "3.11-rc":    ["3.11.0a6", "3.11-rc", "rc"]
+  "3.10.3":     ["3.10.3", "3.10", ""]
+  "3.9.11":     ["3.9.11", "3.9"]
+  "3.8.13":     ["3.8.13", "3.8"]
 
 distros:
   buster: ["buster", ""]
@@ -17,7 +18,7 @@ distros:
   alpine: ["alpine"]
 
 checkouts:
-  master: ["master", "dev"]
+  master: ["master", "dev", "2.0a"]
   "": ["pypi", "1.7", "1", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
