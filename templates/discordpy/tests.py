@@ -43,7 +43,7 @@ def test_has_discord():
 
     from discord.ext import commands
 
-    bot = commands.Bot('?')
+    bot = commands.Bot('?', intents=discord.Intents.all())
     assert hasattr(bot, 'on_message')
 
 
