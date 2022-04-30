@@ -38,7 +38,7 @@ def test_has_discord():
     import discord
     assert discord.__version__
 
-    client = discord.Client()
+    client = discord.Client(intents=discord.Intents.all())
     assert hasattr(client, 'run')
 
     from discord.ext import commands
