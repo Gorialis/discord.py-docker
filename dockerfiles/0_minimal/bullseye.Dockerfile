@@ -1,13 +1,23 @@
-{% include 'WARNING' %}
+#
+# WARNING: THIS DOCKERFILE IS AUTO-GENERATED
+# DIRECT EDITS WILL BE DESTROYED WHEN THIS FILE IS NEXT GENERATED
+# PLEASE EDIT THE TEMPLATES INSTEAD OF THIS FILE
+#
 ARG PYTHON_VERSION
 
-FROM python:$PYTHON_VERSION-buster
-{% include 'LABEL' %}
+FROM python:$PYTHON_VERSION-bullseye
+
+ARG BUILD_TIME=unknown
+ARG GIT_HEAD=unknown
+LABEL maintainer="Devon R <Gorialis>"
+LABEL creation_time="2022-11-21 08:36:33 UTC"
+LABEL build_time=$BUILD_TIME
+LABEL git_head=$GIT_HEAD
 
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH \
-    RUST_VERSION=1.50.0
+    RUST_VERSION=1.65.0
 
 RUN apt-get update && \
     # basic deps
@@ -19,13 +29,13 @@ RUN apt-get update && \
     # install rust with rustup
     dpkgArch="$(dpkg --print-architecture)" && \
     case "${dpkgArch##*-}" in \
-        amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='ed7773edaf1d289656bdec2aacad12413b38ad0193fff54b2231f5140a4b07c5' ;; \
-        armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='7a7b9d246ad63358705d8d4a7d5c2ef1adfec24525d1d5c44a7739e1b867e84d' ;; \
-        arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='f80a0a792b3ab905ab4919474daf4d3f60e574fc6987e69bfba2fd877241a8de' ;; \
-        i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='4473c18286aa1831683a772706d9a5c98b87a61cc014d38063e00a63a480afef' ;; \
+        amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='5cc9ffd1026e82e7fb2eec2121ad71f4b0f044e88bca39207b3f6b769aaa799c' ;; \
+        armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='48c5ecfd1409da93164af20cf4ac2c6f00688b15eb6ba65047f654060c844d85' ;; \
+        arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='e189948e396d47254103a49c987e7fb0e5dd8e34b200aa4481ecc4b8e41fb929' ;; \
+        i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='0e0be29c560ad958ba52fcf06b3ea04435cb3cd674fbe11ce7d954093b9504fd' ;; \
         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;; \
     esac && \
-    rustup_url="https://static.rust-lang.org/rustup/archive/1.23.1/${rustArch}/rustup-init" && \
+    rustup_url="https://static.rust-lang.org/rustup/archive/1.25.1/${rustArch}/rustup-init" && \
     wget "$rustup_url" && \
     echo "${rustupSha256} *rustup-init" | sha256sum -c - && \
     chmod +x rustup-init && \

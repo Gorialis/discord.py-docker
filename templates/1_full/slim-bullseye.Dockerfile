@@ -1,12 +1,8 @@
-#
-# WARNING: THIS DOCKERFILE IS AUTO-GENERATED
-# DIRECT EDITS WILL BE DESTROYED WHEN THIS FILE IS NEXT GENERATED
-# PLEASE EDIT THE TEMPLATES INSTEAD OF THIS FILE
-#
+{% include 'WARNING' %}
 ARG DOCKER_REPO
 ARG PYTHON_VERSION
 
-FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-buster
+FROM $DOCKER_REPO/discord.py:build0-$PYTHON_VERSION-slim-bullseye
 
 RUN apt-get update && \
     # uvloop
@@ -21,6 +17,8 @@ RUN apt-get update && \
     imagemagick \
     # h5py
     libhdf5-dev \
+    # scipy
+    libssl-dev \
     # debugging
     gdb \
     # apt is so noisy
@@ -28,7 +26,7 @@ RUN apt-get update && \
     # always install numpy separately
     pip install -U numpy --retries 30 && \
     # install minor deps
-    pip install -U "asyncpg" "click" "coverage" "flake8" "lxml" "matplotlib" "Pillow" "psutil" "pycryptodome" "pylint" "pytest-cov" "PyYAML" "ruamel.yaml" "toml" "twine" -q --retries 30 && \
+    pip install -U {{ minor_deps.values()|map('enquote')|join(' ') }} -q --retries 30 && \
     # remove caches
     rm -rf /root/.cache/pip/* && \
     apt-get clean && \
