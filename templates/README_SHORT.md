@@ -2,7 +2,7 @@
 
 ## Most recent notice
 
-As development of discord.py 2.0 begins, support for versions lower than 3.8 has been dropped. While the current PyPI version (1.7) still supports 3.6 and 3.7, in the interest of keeping the docker build process simple, and the image tag matrix easy to understand, 3.6 and 3.7 images will no longer be built from this date onwards. It is encouraged that you update any existing containers to 3.9 so you can continue receiving updated dependencies, and to prepare you for whenever 2.0 releases.
+The main Debian image has been upgraded from `buster` to `bullseye`, 3.11 builds are added, and the new image tag names are updated to reflect the correct versions.
 
 *See all notices in the [full README](https://github.com/Gorialis/discord.py-docker/blob/master/dockerfiles/README.md)*
 

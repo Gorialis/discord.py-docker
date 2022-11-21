@@ -7,20 +7,19 @@
 
 # When updating this ALSO UPDATE .github/workflows/docker-build.yml !!
 python_versions:
-  # Disabled until it stabilizes more
-  #"3.11-rc":    ["3.11.0a7", "3.11-rc", "rc"]
-  "3.10.4":     ["3.10.4", "3.10", ""]
-  "3.9.12":     ["3.9.12", "3.9"]
-  "3.8.13":     ["3.8.13", "3.8"]
+  "3.11.0":     ["3.11.0", "3.11", ""]
+  "3.10.8":     ["3.10.8", "3.10"]
+  "3.9.15":     ["3.9.15", "3.9"]
+  "3.8.15":     ["3.8.15", "3.8"]
 
 distros:
-  buster: ["buster", ""]
-  slim-buster: ["slim-buster", "slim"]
+  bullseye: ["bullseye", ""]
+  slim-bullseye: ["slim-bullseye", "slim"]
   alpine: ["alpine"]
 
 checkouts:
-  master: ["master", "dev", "2.0a"]
-  "": ["pypi", "1.7", "1", ""]
+  master: ["master", "dev", "2.2a", "2.2"]
+  "": ["pypi", "2.1", "2", ""]
 
 # these don't follow the above syntax as they're just pulled by the templates
 minor_deps:
