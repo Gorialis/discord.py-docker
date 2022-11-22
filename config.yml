@@ -41,7 +41,6 @@ minor_deps:
 
 major_deps:
   aiomysql: aiomysql
-  aioredis: aioredis
   beautifulsoup4: beautifulsoup4
   cairosvg: cairosvg
   colorlog: colorlog
@@ -52,6 +51,7 @@ major_deps:
   objgraph: objgraph
   parsedatetime: parsedatetime
   python-dateutil: python-dateutil
+  redis: redis>=4.2.0rc1
   sqlalchemy: sqlalchemy
   tabulate: tabulate
   tox: tox

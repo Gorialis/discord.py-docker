@@ -266,7 +266,7 @@ def test_bs4():
 
 @pytest.mark.parametrize(
     'db',
-    ['aiomysql', 'aioredis', 'asyncpg']
+    ['aiomysql', 'redis', 'asyncpg']
 )
 def test_db_shallow(db):
     db_module = pytest.importorskip(db)
