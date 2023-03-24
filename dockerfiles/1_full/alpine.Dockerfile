@@ -18,7 +18,7 @@ RUN \
     # Pillow
     jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev harfbuzz-dev fribidi-dev libpng-dev giflib-dev \
     # wand
-    imagemagick6-dev \
+    imagemagick-dev \
     # h5py
     hdf5-dev \
     # debugging
