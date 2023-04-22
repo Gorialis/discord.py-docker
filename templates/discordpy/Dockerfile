@@ -12,7 +12,7 @@ WORKDIR /tmp/tests
 
 COPY tests.py /tmp/tests/runtest.py
 
-RUN INSTALL_TARGET="discord.py[voice,docs]${CHECKOUT:+" @ git+https://github.com/Rapptz/discord.py@"}${CHECKOUT}" && \
+RUN INSTALL_TARGET="discord.py[voice,docs,speed,test]${CHECKOUT:+" @ git+https://github.com/Rapptz/discord.py@"}${CHECKOUT}" && \
     echo "Install target: ${INSTALL_TARGET}" && \
     # install d.py
     pip install -U "${INSTALL_TARGET}" -q --retries 30 && \

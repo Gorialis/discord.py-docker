@@ -7,8 +7,8 @@
 
 # When updating this ALSO UPDATE .github/workflows/docker-build.yml !!
 python_versions:
-  "3.11.2":     ["3.11.2", "3.11", ""]
-  "3.10.10":    ["3.10.10", "3.10"]
+  "3.11.3":     ["3.11.3", "3.11", ""]
+  "3.10.11":    ["3.10.11", "3.10"]
   "3.9.16":     ["3.9.16", "3.9"]
   "3.8.16":     ["3.8.16", "3.8"]
 
@@ -51,7 +51,7 @@ major_deps:
   objgraph: objgraph
   parsedatetime: parsedatetime
   python-dateutil: python-dateutil
-  redis: redis>=4.2.0rc1
+  redis: redis
   sqlalchemy: sqlalchemy
   tabulate: tabulate
   tox: tox
