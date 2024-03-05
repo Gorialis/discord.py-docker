@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from datetime import datetime
+from datetime import datetime, UTC
 from itertools import chain, product
 from jinja2 import Environment, FileSystemLoader
 from os import makedirs, path, walk
@@ -88,12 +88,12 @@ extension_funcs = {
 env.filters.update(**extension_funcs)
 env.globals.update(**extension_funcs)
 
-now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+now = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
 
 for root, dirs, files in walk('templates'):
     for name in dirs:
         makedirs(f'dockerfiles/{path.join(root, name)[10:]}', exist_ok=True)
-    
+
     for name in files:
         real_name = path.join(root, name)[10:].replace('\\', '/')
         template = env.get_template(real_name)
