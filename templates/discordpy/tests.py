@@ -198,7 +198,7 @@ def test_has_pillow():
 
     data = bytes([int(x*255) for x in itertools.chain(*[colorsys.hsv_to_rgb(x / 255, 1, 1) for x in range(256)])])
 
-    with Image.frombytes('RGB', (256, 1), data).resize((256, 100), Image.ANTIALIAS) as im:
+    with Image.frombytes('RGB', (256, 1), data).resize((256, 100), Image.BICUBIC) as im:
         # write standard PNG file
         im.save('_test_pillow.png', 'png')
         assert pathlib.Path('_test_pillow.png').exists()
